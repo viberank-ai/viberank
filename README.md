@@ -1,6 +1,8 @@
 # viberank
 generative search optimization toolsuite
 
+## Getting Started
+Quick start guide for viberank integration
 ## Overview
 A comprehensive tool for optimizing content visibility in generative search engines.
 
