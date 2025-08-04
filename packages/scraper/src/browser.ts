@@ -1,4 +1,5 @@
-import { chromium, Page } from 'playwright-extra';
+import { chromium } from 'playwright-extra';
+import type { Page } from 'playwright-core';
 import StealthPlugin from 'puppeteer-extra-plugin-stealth';
 
 chromium.use(StealthPlugin());
