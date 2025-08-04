@@ -13,7 +13,8 @@
     "prepack": "pinst --disable",
     "postpack": "pinst --enable",
     "cli": "tsx apps/cli/src/ingestBrand.ts",
-    "generate:queries:en": "tsx packages/queries/src/generator.ts"
+    "generate:queries:en": "tsx packages/queries/src/generator.ts",
+    "expand:queries": "tsx packages/queries/src/translateDedup.ts"
   },
   "bin": {
     "ingest-brand": "apps/cli/src/ingestBrand.ts"
