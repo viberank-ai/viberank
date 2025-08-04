@@ -14,7 +14,7 @@
     "postpack": "pinst --enable",
     "cli": "tsx apps/cli/src/ingestBrand.ts",
     "scrape:google": "tsx packages/scraper/src/googleAI.ts",
-    "scrape:perplexity": "ts-node packages/scraper/src/perplexity.ts 'test query'"
+    "scrape:perplexity": "tsx packages/scraper/src/perplexity.ts 'test query'"
   },
   "bin": {
     "ingest-brand": "apps/cli/src/ingestBrand.ts"
