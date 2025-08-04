@@ -33,7 +33,7 @@ export async function googleAIOverview(query: string): Promise<GoogleAIResult> {
   return { answer, citations: Array.from(new Set(citations)), followUps };
 }
 
-if (require.main === module) {
+if (import.meta.url === `file://${process.argv[1]}`) {
   (async () => {
     const query = process.argv[2] || 'test query';
     const result = await googleAIOverview(query);
