@@ -1,0 +1,8 @@
+app = "viberank"
+primary_region = "iad"
+
+[build]
+  ignorefile = ".dockerignore"
+
+[env]
+  PORT = "3000"

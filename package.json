@@ -11,7 +11,11 @@
     "test": "turbo run test",
     "postinstall": "husky install",
     "prepack": "pinst --disable",
-    "postpack": "pinst --enable"
+    "postpack": "pinst --enable",
+    "cli": "tsx apps/cli/src/ingestBrand.ts"
+  },
+  "bin": {
+    "ingest-brand": "apps/cli/src/ingestBrand.ts"
   },
   "packageManager": "pnpm@9.15.9",
   "keywords": [],
@@ -19,6 +23,7 @@
   "license": "ISC",
   "devDependencies": {
     "@eslint/js": "^9.32.0",
+    "@types/node": "^24.1.0",
     "@typescript-eslint/eslint-plugin": "^8.38.0",
     "@typescript-eslint/parser": "^8.38.0",
     "@vitest/coverage-v8": "^3.2.4",
@@ -29,9 +34,14 @@
     "pinst": "^3.0.0",
     "prettier": "^3.6.2",
     "ts-node": "^10.9.2",
+    "tsx": "^4.20.3",
     "turbo": "^2.5.5",
     "typescript": "^5.9.2",
     "typescript-eslint": "^8.38.0",
     "vitest": "^3.2.4"
+  },
+  "dependencies": {
+    "commander": "^14.0.0",
+    "zod": "^4.0.14"
   }
 }
