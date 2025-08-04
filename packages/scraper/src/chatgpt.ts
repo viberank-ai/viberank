@@ -1,7 +1,8 @@
-import { chromium, Page } from 'playwright-extra';
-import Stealth from 'playwright-extra-plugin-stealth';
+import { chromium } from 'playwright-extra';
+import type { Page } from 'playwright-core';
+import StealthPlugin from 'puppeteer-extra-plugin-stealth';
 
-chromium.use(Stealth());
+chromium.use(StealthPlugin());
 
 export interface ChatGPTResult {
   answer: string;
