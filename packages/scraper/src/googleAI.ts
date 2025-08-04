@@ -8,29 +8,83 @@ export interface GoogleAIResult {
 }
 
 export async function googleAIOverview(query: string): Promise<GoogleAIResult> {
-  const url = `https://www.google.com/search?hl=en&q=${encodeURIComponent(query)}&udm=14`;
+  const url = `https://www.google.com/search?hl=en&q=${encodeURIComponent(query)}`;
   const html = await openPage(url);
   const $ = cheerio.load(html);
 
-  const answer =
-    $('[data-md="answer"]').text().trim() || $('div[data-attrid="wa:/description"]').text().trim();
+  // Look for AI Overview content - try multiple approaches
+  let answer = '';
 
-  const citations = [];
-  $('a[data-ved][ping]').each((_, el) => {
-    const href = $(el).attr('href');
-    if (href?.startsWith('/url?')) {
-      const u = new URL('https://google.com' + href);
-      citations.push(u.searchParams.get('q') || '');
+  // Method 1: Look for text near "AI Overview"
+  $('*').each((_, el) => {
+    const text = $(el).text();
+    if (text.includes('AI Overview') && !answer) {
+      // Get the parent and look for substantial text content
+      const parent = $(el).parent();
+      const siblings = parent.siblings();
+      siblings.each((_, sibling) => {
+        const siblingText = $(sibling).text().trim();
+        if (siblingText.length > 50 && !siblingText.includes('AI Overview')) {
+          answer = siblingText;
+          return false; // break
+        }
+      });
     }
   });
 
-  const followUps = [];
-  $('div[jscontroller] span').each((_, el) => {
-    const t = $(el).text().trim();
-    if (t.length && t.endsWith('?')) followUps.push(t);
+  // Method 2: Look for longer paragraphs in the main content area
+  if (!answer) {
+    $('div p, div div').each((_, el) => {
+      const text = $(el).text().trim();
+      if (
+        text.length > 100 &&
+        text.length < 2000 &&
+        !text.includes('©') &&
+        !text.includes('Wikipedia')
+      ) {
+        answer = text;
+        return false; // break
+      }
+    });
+  }
+
+  // Extract citations from links
+  const citations = [];
+  $('a[href*="/url?"]').each((_, el) => {
+    const href = $(el).attr('href');
+    if (href?.includes('/url?')) {
+      try {
+        const u = new URL('https://google.com' + href);
+        const actualUrl = u.searchParams.get('q');
+        if (actualUrl && actualUrl.startsWith('http')) {
+          citations.push(actualUrl);
+        }
+      } catch {
+        // ignore invalid URLs
+      }
+    }
   });
 
-  return { answer, citations: Array.from(new Set(citations)), followUps };
+  // Extract follow-up questions
+  const followUps = [];
+  $('span, div').each((_, el) => {
+    const text = $(el).text().trim();
+    if (
+      text.length > 10 &&
+      text.length < 100 &&
+      text.endsWith('?') &&
+      !text.includes('OpenAI') &&
+      !text.includes('Wikipedia')
+    ) {
+      followUps.push(text);
+    }
+  });
+
+  return {
+    answer: answer.substring(0, 1000), // Limit answer length
+    citations: Array.from(new Set(citations)).slice(0, 10), // Limit citations
+    followUps: Array.from(new Set(followUps)).slice(0, 5), // Limit follow-ups
+  };
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
