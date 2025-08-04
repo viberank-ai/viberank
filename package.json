@@ -15,6 +15,9 @@
     "cli": "tsx apps/cli/src/ingestBrand.ts",
     "scrape:google": "tsx packages/scraper/src/googleAI.ts",
     "scrape:perplexity": "tsx packages/scraper/src/perplexity.ts 'test query'"
+    "generate:queries:en": "tsx packages/queries/src/generator.ts",
+    "expand:queries": "tsx packages/queries/src/translateDedup.ts",
+    "tag:queries": "tsx packages/queries/src/tagger.ts"
   },
   "bin": {
     "ingest-brand": "apps/cli/src/ingestBrand.ts"
@@ -49,6 +52,8 @@
     "playwright": "^1.54.2",
     "playwright-extra": "^4.3.6",
     "puppeteer-extra-plugin-stealth": "^2.11.2",
+    "fast-glob": "^3.3.3",
+    "openai": "^5.11.0",
     "zod": "^4.0.14"
   }
 }

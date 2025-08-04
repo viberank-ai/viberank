@@ -20,6 +20,7 @@ async function translate(list: string[], lang: 'es' | 'fr'): Promise<string[]> {
   const content = completion.choices[0].message?.content;
   return (
     content
+
       ?.split('\n')
       .map((s) => s.trim())
       .filter(Boolean) ?? []
@@ -46,5 +47,6 @@ if (require.main === module) {
     await fs.mkdir('data', { recursive: true });
     await fs.writeFile('data/queries-multilingual.json', JSON.stringify(deduped, null, 2));
     console.log(`✅ Total unique queries: ${deduped.length}`);
+
   })();
 }
