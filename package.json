@@ -14,7 +14,8 @@
     "postpack": "pinst --enable",
     "cli": "tsx apps/cli/src/ingestBrand.ts",
     "generate:queries:en": "tsx packages/queries/src/generator.ts",
-    "expand:queries": "tsx packages/queries/src/translateDedup.ts"
+    "expand:queries": "tsx packages/queries/src/translateDedup.ts",
+    "tag:queries": "tsx packages/queries/src/tagger.ts"
   },
   "bin": {
     "ingest-brand": "apps/cli/src/ingestBrand.ts"
@@ -44,6 +45,7 @@
   },
   "dependencies": {
     "commander": "^14.0.0",
+    "fast-glob": "^3.3.3",
     "openai": "^5.11.0",
     "zod": "^4.0.14"
   }
