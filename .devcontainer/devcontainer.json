@@ -1,0 +1,12 @@
+{
+  "name": "VibeRank Dev",
+  "build": { "dockerfile": "Dockerfile" },
+  "postCreateCommand": "pnpm install",
+  "customizations": {
+    "vscode": {
+      "settings": { "terminal.integrated.defaultProfile.linux": "bash" },
+      "extensions": ["dbaeumer.vscode-eslint", "esbenp.prettier-vscode"]
+    }
+  },
+  "forwardPorts": [3000, 5555]
+}
