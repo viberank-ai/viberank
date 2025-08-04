@@ -11,6 +11,9 @@ importers:
       commander:
         specifier: ^14.0.0
         version: 14.0.0
+      fast-glob:
+        specifier: ^3.3.3
+        version: 3.3.3
       openai:
         specifier: ^5.11.0
         version: 5.11.0(zod@4.0.14)
