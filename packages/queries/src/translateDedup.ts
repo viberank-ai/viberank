@@ -5,58 +5,48 @@ const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
 
-export async function translate(list: string[], lang: 'es' | 'fr'): Promise<string[]> {
-  const langNames = { es: 'Spanish', fr: 'French' };
-  const response = await openai.chat.completions.create({
+async function translate(list: string[], lang: 'es' | 'fr'): Promise<string[]> {
+  const completion = await openai.chat.completions.create({
     model: 'gpt-4o-mini',
     messages: [
       {
         role: 'system',
-        content: `Translate each line to ${langNames[lang]} preserving meaning and keywords.`,
+        content: `Translate each line to ${lang} preserving meaning and keywords.`,
       },
       { role: 'user', content: list.join('\n') },
     ],
   });
+
+  const content = completion.choices[0].message?.content;
   return (
-    response.choices[0].message?.content
+    content
+
       ?.split('\n')
       .map((s) => s.trim())
       .filter(Boolean) ?? []
   );
 }
 
-export function deduplicate(queries: string[]): string[] {
-  return Array.from(new Set(queries));
+export async function translateAndDedupe(inputFilePath: string): Promise<string[]> {
+  const en: string[] = JSON.parse(await fs.readFile(inputFilePath, 'utf-8'));
+  const es = await translate(en, 'es');
+  const fr = await translate(en, 'fr');
+  const deduped = Array.from(new Set([...en, ...es, ...fr]));
+  return deduped;
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (require.main === module) {
   (async () => {
     const inputFile = process.argv[2];
     if (!inputFile) {
-      console.error('Usage: tsx translateDedup.ts <input-file>');
+      console.error('Usage: ts-node translateDedup.ts <input-file>');
       process.exit(1);
     }
 
-    const en: string[] = JSON.parse(await fs.readFile(inputFile, 'utf-8'));
-    console.log(`📥 Loaded ${en.length} English queries`);
-
-    console.log('🔄 Translating to Spanish...');
-    const es = await translate(en, 'es');
-    console.log(`✅ Generated ${es.length} Spanish queries`);
-
-    console.log('🔄 Translating to French...');
-    const fr = await translate(en, 'fr');
-    console.log(`✅ Generated ${fr.length} French queries`);
-
-    const combined = [...en, ...es, ...fr];
-    const deduped = deduplicate(combined);
-    const duplicateCount = combined.length - deduped.length;
-    const duplicatePercentage = ((duplicateCount / combined.length) * 100).toFixed(1);
-
+    const deduped = await translateAndDedupe(inputFile);
+    await fs.mkdir('data', { recursive: true });
     await fs.writeFile('data/queries-multilingual.json', JSON.stringify(deduped, null, 2));
-
     console.log(`✅ Total unique queries: ${deduped.length}`);
-    console.log(`📊 Duplicates removed: ${duplicateCount} (${duplicatePercentage}%)`);
-    console.log(`💾 Saved to data/queries-multilingual.json`);
+
   })();
 }

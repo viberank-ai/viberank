@@ -1,6 +1,9 @@
 import { describe, expect, vi, it, beforeEach } from 'vitest';
 import { generateQueries } from './generator';
+import { Brand } from '@viberank/types/brand';
+
 import type { Brand } from '../../types/src/brand';
+
 
 // Create a mock that can be changed per test
 const mockCreate = vi.fn();
