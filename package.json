@@ -12,7 +12,8 @@
     "postinstall": "husky install",
     "prepack": "pinst --disable",
     "postpack": "pinst --enable",
-    "cli": "tsx apps/cli/src/ingestBrand.ts"
+    "cli": "tsx apps/cli/src/ingestBrand.ts",
+    "generate:queries:en": "tsx packages/queries/src/generator.ts"
   },
   "bin": {
     "ingest-brand": "apps/cli/src/ingestBrand.ts"
@@ -42,6 +43,7 @@
   },
   "dependencies": {
     "commander": "^14.0.0",
+    "openai": "^5.11.0",
     "zod": "^4.0.14"
   }
 }
