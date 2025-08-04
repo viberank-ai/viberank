@@ -1,4 +1,4 @@
-app = "viberank"
+app = "viberank-prod"
 primary_region = "iad"
 
 [build]
