@@ -12,7 +12,8 @@
     "postinstall": "husky install",
     "prepack": "pinst --disable",
     "postpack": "pinst --enable",
-    "cli": "tsx apps/cli/src/ingestBrand.ts"
+    "cli": "tsx apps/cli/src/ingestBrand.ts",
+    "scrape:google": "tsx packages/scraper/src/googleAI.ts"
   },
   "bin": {
     "ingest-brand": "apps/cli/src/ingestBrand.ts"
@@ -41,6 +42,7 @@
     "vitest": "^3.2.4"
   },
   "dependencies": {
+    "cheerio": "^1.1.2",
     "commander": "^14.0.0",
     "playwright": "^1.54.2",
     "playwright-extra": "^4.3.6",
