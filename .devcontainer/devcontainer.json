@@ -4,9 +4,13 @@
   "postCreateCommand": "pnpm install",
   "customizations": {
     "vscode": {
-      "settings": { "terminal.integrated.defaultProfile.linux": "bash" },
-      "extensions": ["dbaeumer.vscode-eslint", "esbenp.prettier-vscode"]
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "github.vscode-pull-request-github"
+      ]
     }
   },
-  "forwardPorts": [3000, 5555]
+  "forwardPorts": [3000,5555],
+  "remoteUser": "node"
 }

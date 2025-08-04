@@ -1,0 +1,13 @@
+name: Devcontainer Smoke Test
+on: [pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/devcontainers/ci:0.3
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run pnpm test inside devcontainer
+        run: |
+          pnpm install
+          pnpm test
