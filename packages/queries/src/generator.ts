@@ -1,4 +1,8 @@
+
 import { Brand } from '@viberank/types/brand';
+
+import type { Brand } from '../../types/src/brand';
+
 import OpenAI from 'openai';
 import crypto from 'node:crypto';
 import fs from 'fs/promises';
