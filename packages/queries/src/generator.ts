@@ -1,4 +1,8 @@
+
+import { Brand } from '@viberank/types/brand';
+
 import type { Brand } from '../../types/src/brand';
+
 import OpenAI from 'openai';
 import crypto from 'node:crypto';
 import fs from 'fs/promises';
@@ -34,7 +38,7 @@ export async function generateQueries(brand: Brand): Promise<string[]> {
   return Array.from(new Set(list)).slice(0, 200);
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (require.main === module) {
   (async () => {
     const brand: Brand = JSON.parse(await fs.readFile('data/brand.json', 'utf-8'));
     const queries = await generateQueries(brand);
