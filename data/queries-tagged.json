@@ -1,0 +1,1662 @@
+[
+  {
+    "q": "What makes Acme Widgets better than Globex's products?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "How does the performance of Acme Widgets compare to Globex alternatives?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Best Widgets for home use: Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Is Acme’s Widget more durable than Globex's?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Best uses for Acme Widgets compared to Globex options",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Acme Widgets customer reviews versus Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "What do customers prefer: Acme Widgets or Globex?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Which brand offers better value: Acme Widgets or Globex?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Best Widgets for small businesses: Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Acme Widget vs. Globex Widget: which is more affordable?",
+    "intent": "transactional",
+    "stage": "awareness"
+  },
+  {
+    "q": "What are the specifications of Acme Widgets compared to Globex?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Best Widgets for DIY projects: Acme or Globex?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "How do Acme’s Widgets rate against Globex in quality?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Which brand's Widgets have better features: Acme or Globex?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Acme Widgets vs. Globex: Which is more reliable?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Best Widgets for professionals: Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "How do Acme and Globex Widgets compare in warranty offers?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Acme Widgets performance reviews compared to Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Best Widgets for outdoor use: Acme or Globex?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Is Acme’s Widget easier to use than Globex's?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Acme Widget advantages over Globex products",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Best Widgets for students: Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Acme vs. Globex: Which Widget has better customer support?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Are Acme Widgets eco-friendly compared to Globex?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Comparison of Acme Widgets and Globex durability",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Best budget Widget options: Acme vs. Globex",
+    "intent": "transactional",
+    "stage": "awareness"
+  },
+  {
+    "q": "How does the price of Acme Widgets compare to Globex?",
+    "intent": "transactional",
+    "stage": "awareness"
+  },
+  {
+    "q": "What do experts say about Acme Widgets vs. Globex?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Best Widgets for hobbyists: Acme or Globex?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Do Acme Widgets perform better than Globex's in tests?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Best Widgets for tech enthusiasts: Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "How do online ratings of Acme Widgets compare to Globex?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Acme Widgets vs. Globex: Which is more innovative?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Best Widgets for crafting: Acme or Globex?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "How does Acme’s Widget design compare to Globex's?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Best Widgets for families: Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "What are the pros and cons of Acme Widgets versus Globex?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Best Widgets for automotive use: Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "How do Acme and Globex prices stack up?",
+    "intent": "transactional",
+    "stage": "awareness"
+  },
+  {
+    "q": "Best Widgets for heavy-duty tasks: Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Which Widget has better accessories: Acme or Globex?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "How user-friendly are Acme Widgets compared to Globex?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Best Widgets for office use: Acme or Globex?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "What warranty do Acme Widgets offer vs. Globex?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Do Acme Widgets have better features than Globex models?",
+    "intent": "comparative",
+    "stage": "consideration"
+  },
+  {
+    "q": "Best eco-friendly Widgets: Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "How do Acme Widgets and Globex handle customer complaints?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Best Widgets for travel: Acme or Globex?",
+    "intent": "informational",
+    "stage": "consideration"
+  },
+  {
+    "q": "Comparison of Acme and Globex in design and aesthetics",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Which Widgets have better reviews: Acme or Globex?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Best multipurpose Widgets: Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "How does the build quality of Acme Widgets compare to Globex?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "What do experts recommend: Acme vs. Globex Widgets?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Best Widgets for events: Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "How does customer service compare between Acme and Globex?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "What is the lifespan of Acme Widgets vs. Globex?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Best Widgets for education: Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "How do the features of Acme Widgets compare to Globex’s bestsellers?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Are Acme Widgets more popular than Globex Products?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Best Widgets for durability: Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "How are Acme Widgets rated compared to Globex?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Best Widgets for innovation: Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Do professionals prefer Acme Widgets over Globex?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Acme vs. Globex: Which Widget is better for beginners?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Best Widgets for sports enthusiasts: Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "How do Acme and Globex handle product recalls?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Best Widgets for performance: Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "What are the main differences between Acme and Globex Widgets?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Best Widgets for seasonal projects: Acme or Globex?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "How do Acme Widgets perform in consumer tests vs. Globex?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Are Acme Widgets better for value than Globex?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Best Widgets for minimalists: Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "What are the main advantages of Acme Widgets compared to Globex?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Do Acme Widgets have better safety features than Globex?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Best Widgets for beginners: Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "How do shipping options compare for Acme and Globex?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "What do user reviews say about Acme vs. Globex Widgets?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Best Widgets for quick tasks: Acme or Globex?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "How reliable are Acme Widgets in comparison to Globex?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Best Widgets for creative projects: Acme or Globex?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "What are the ratings of Acme Widgets against Globex?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "How do Acme and Globex reward programs compare?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Best Widgets for everyday use: Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Are Acme’s Widgets worth the hype compared to Globex?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Best Widgets for collaborations: Acme or Globex?",
+    "intent": "informational",
+    "stage": "consideration"
+  },
+  {
+    "q": "Do Acme Widgets come with better documentation than Globex?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Best Widgets for styling: Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "How do product specs of Acme Widgets stack up against Globex?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Acme vs. Globex: Which has better online presence?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Best Widgets for luxury needs: Acme or Globex?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "How do durability ratings compare between Acme and Globex?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Best Widgets for impactful work: Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "What do comparisons say about customer loyalty for Acme vs. Globex?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Are there significant differences in pricing for Acme and Globex?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Best Widgets for collaboration: Acme or Globex?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "How do reviews highlight differences between Acme and Globex Models?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Best Widgets for functional use: Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "How do promotion campaigns for Acme compare to Globex?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Best Widgets for resistance to wear: Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Do users recommend Acme Widgets more than Globex?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Best Widgets for crowd favorites: Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Are Acme Widget features more advanced than Globex’s?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Best Widgets for ultimate performance: Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "What do experts advise: Acme vs. Globex Widgets for quality?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Best Widgets under $50: Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "What are the marketing strategies of Acme compared to Globex?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Best Widgets for lasting performance: Acme or Globex?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "How do consumer preferences lean for Acme vs. Globex Widgets?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Which brand offers better limited editions: Acme or Globex?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Best Widgets for style: Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Acme Widgets or Globex: Which has better functionality?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "¿Qué hace que los Widgets de Acme sean mejores que los productos de Globex?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "¿Cómo se compara el rendimiento de los Widgets de Acme con las alternativas de Globex?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Mejores Widgets para uso en el hogar: Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "¿Es el Widget de Acme más duradero que el de Globex?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Mejores usos de los Widgets de Acme en comparación con las opciones de Globex",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Opiniones de clientes sobre los Widgets de Acme versus Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "¿Qué prefieren los clientes: Widgets de Acme o Globex?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "¿Qué marca ofrece mejor valor: Widgets de Acme o Globex?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Mejores Widgets para pequeñas empresas: Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Widget de Acme vs. Widget de Globex: ¿cuál es más asequible?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "¿Cuáles son las especificaciones de los Widgets de Acme en comparación con los de Globex?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Mejores Widgets para proyectos de bricolaje: Acme o Globex?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "¿Cómo evalúan los Widgets de Acme frente a Globex en calidad?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "¿Cual de las marcas tiene Widgets con mejores características: Acme o Globex?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Widgets de Acme vs. Globex: ¿Cuál es más confiable?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Mejores Widgets para profesionales: Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "¿Cómo se comparan las ofertas de garantía de los Widgets de Acme y Globex?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Opiniones sobre el rendimiento de los Widgets de Acme en comparación con Globex",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Mejores Widgets para uso al aire libre: Acme o Globex?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "¿Es el Widget de Acme más fácil de usar que el de Globex?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Ventajas del Widget de Acme sobre los productos de Globex",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Mejores Widgets para estudiantes: Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Acme vs. Globex: ¿Cuál Widget tiene mejor soporte al cliente?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "¿Son los Widgets de Acme ecológicos en comparación con los de Globex?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Comparación de la durabilidad de los Widgets de Acme y Globex",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Mejores opciones de Widgets económicos: Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "¿Cómo se compara el precio de los Widgets de Acme con los de Globex?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "¿Qué dicen los expertos sobre los Widgets de Acme vs. Globex?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Mejores Widgets para aficionados: Acme o Globex?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "¿Rinden mejor los Widgets de Acme que los de Globex en pruebas?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Mejores Widgets para entusiastas de la tecnología: Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "¿Cómo se comparan las calificaciones en línea de los Widgets de Acme con Globex?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Widgets de Acme vs. Globex: ¿Cuál es más innovador?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Mejores Widgets para manualidades: Acme o Globex?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "¿Cómo se compara el diseño del Widget de Acme con el de Globex?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Mejores Widgets para familias: Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "¿Cuáles son las ventajas y desventajas de los Widgets de Acme en comparación con los de Globex?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Mejores Widgets para uso automotriz: Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "¿Cómo se comparan los precios de Acme y Globex?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Mejores Widgets para tareas de alta resistencia: Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "¿Qué Widget tiene mejores accesorios: Acme o Globex?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "¿Qué tan amigables son los Widgets de Acme en comparación con Globex?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Mejores Widgets para uso de oficina: Acme o Globex?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "¿Qué garantía ofrecen los Widgets de Acme vs. Globex?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "¿Tienen los Widgets de Acme mejores características que los modelos de Globex?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Mejores Widgets ecológicos: Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "¿Cómo manejan los Widgets de Acme y Globex las quejas de los clientes?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Mejores Widgets para viajar: Acme o Globex?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Comparación de Acme y Globex en diseño y estética",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "¿Qué Widgets tienen mejores opiniones: Acme o Globex?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Mejores Widgets multipropósito: Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "¿Cómo se compara la calidad de construcción de los Widgets de Acme con Globex?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "¿Qué recomiendan los expertos: Widgets de Acme vs. Globex?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Mejores Widgets para eventos: Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "¿Cómo se compara el servicio al cliente entre Acme y Globex?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "¿Cuál es la vida útil de los Widgets de Acme vs. Globex?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Mejores Widgets para la educación: Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "¿Cómo se comparan las características de los Widgets de Acme con los superventas de Globex?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "¿Son los Widgets de Acme más populares que los productos de Globex?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Mejores Widgets para durabilidad: Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "¿Cómo se califican los Widgets de Acme en comparación con los de Globex?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Mejores Widgets para innovación: Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "¿Preferirían los profesionales los Widgets de Acme sobre los de Globex?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Acme vs. Globex: ¿Cuál Widget es mejor para principiantes?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Mejores Widgets para entusiastas de los deportes: Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "¿Cómo manejan Acme y Globex los retiros de productos?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Mejores Widgets para rendimiento: Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "¿Cuáles son las principales diferencias entre los Widgets de Acme y Globex?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Mejores Widgets para proyectos estacionales: Acme o Globex?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "¿Cómo rinden los Widgets de Acme en pruebas de consumidores vs. Globex?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "¿Son los Widgets de Acme mejores en valor que los de Globex?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Mejores Widgets para minimalistas: Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "¿Cuáles son las principales ventajas de los Widgets de Acme en comparación con los de Globex?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "¿Tienen los Widgets de Acme mejores características de seguridad que los de Globex?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Mejores Widgets para principiantes: Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "¿Cómo se comparan las opciones de envío para Acme y Globex?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "¿Qué dicen las opiniones de los usuarios sobre los Widgets de Acme vs. Globex?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Mejores Widgets para tareas rápidas: Acme o Globex?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "¿Qué tan confiables son los Widgets de Acme en comparación con los de Globex?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Mejores Widgets para proyectos creativos: Acme o Globex?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "¿Cuáles son las calificaciones de los Widgets de Acme contra los de Globex?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "¿Cómo se comparan los programas de recompensas de Acme y Globex?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Mejores Widgets para uso diario: Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "¿Valen la pena los Widgets de Acme en comparación con los de Globex?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Mejores Widgets para colaboraciones: Acme o Globex?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "¿Vienen los Widgets de Acme con mejor documentación que los de Globex?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Mejores Widgets para estilización: Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "¿Cómo se comparan las especificaciones de los productos de los Widgets de Acme contra los de Globex?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Acme vs. Globex: ¿Quién tiene mejor presencia en línea?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Mejores Widgets para necesidades de lujo: Acme o Globex?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "¿Cómo se comparan las calificaciones de durabilidad entre Acme y Globex?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Mejores Widgets para trabajos impactantes: Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "¿Qué dicen las comparaciones sobre la lealtad del cliente hacia Acme vs. Globex?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "¿Existen diferencias significativas en el precio entre Acme y Globex?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Mejores Widgets para colaboración: Acme o Globex?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "¿Cómo destacan las reseñas las diferencias entre los modelos de Acme y Globex?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Mejores Widgets para uso funcional: Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "¿Cómo se comparan las campañas de promoción de Acme con las de Globex?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Mejores Widgets para resistencia al desgaste: Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "¿Recomiendan los usuarios más los Widgets de Acme que los de Globex?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Mejores Widgets para los favoritos del público: Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "¿Son las características de los Widgets de Acme más avanzadas que las de Globex?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Mejores Widgets para un rendimiento óptimo: Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "¿Qué recomiendan los expertos: Widgets de Acme vs. Globex por calidad?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Mejores Widgets por menos de $50: Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "¿Cuáles son las estrategias de marketing de Acme en comparación con Globex?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Mejores Widgets para un rendimiento duradero: Acme o Globex?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "¿Cómo se inclinan las preferencias del consumidor por los Widgets de Acme vs. Globex?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "¿Qué marca ofrece mejores ediciones limitadas: Acme o Globex?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Mejores Widgets para estilo: Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "¿Widgets de Acme o Globex: cuál tiene mejor funcionalidad?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Qu'est-ce qui rend les widgets Acme meilleurs que les produits de Globex ?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Comment la performance des widgets Acme se compare-t-elle aux alternatives de Globex ?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Meilleurs widgets pour un usage domestique : Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Le widget d'Acme est-il plus durable que celui de Globex ?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Meilleures utilisations des widgets Acme par rapport aux options de Globex",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Avis des clients sur les widgets Acme versus Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Que préfèrent les clients : les widgets Acme ou Globex ?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Quelle marque offre le meilleur rapport qualité-prix : Acme ou Globex ?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Meilleurs widgets pour les petites entreprises : Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Widget Acme vs. Widget Globex : lequel est plus abordable ?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Quelles sont les spécifications des widgets Acme par rapport à ceux de Globex ?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Meilleurs widgets pour les projets de bricolage : Acme ou Globex ?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Comment les widgets d'Acme se classent-ils par rapport à ceux de Globex en termes de qualité ?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Quelle marque a des widgets avec de meilleures fonctionnalités : Acme ou Globex ?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Widgets Acme vs. Globex : lequel est le plus fiable ?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Meilleurs widgets pour les professionnels : Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Comment les offres de garantie des widgets Acme se comparent-elles à celles de Globex ?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Avis sur la performance des widgets Acme par rapport à Globex",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Meilleurs widgets pour un usage extérieur : Acme ou Globex ?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Le widget d'Acme est-il plus facile à utiliser que celui de Globex ?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Avantages des widgets Acme par rapport aux produits de Globex",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Meilleurs widgets pour les étudiants : Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Acme vs. Globex : quel widget a un meilleur service client ?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Les widgets Acme sont-ils écologiques par rapport à Globex ?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Comparaison de la durabilité des widgets Acme et Globex",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Meilleures options de widgets à petit budget : Acme vs. Globex",
+    "intent": "transactional",
+    "stage": "awareness"
+  },
+  {
+    "q": "Comment le prix des widgets Acme se compare-t-il à celui de Globex ?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Que disent les experts des widgets Acme par rapport à Globex ?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Meilleurs widgets pour les passionnés : Acme ou Globex ?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Les widgets Acme fonctionnent-ils mieux que ceux de Globex lors des tests ?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Meilleurs widgets pour les passionnés de technologie : Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Comment les évaluations en ligne des widgets Acme se comparent-elles à celles de Globex ?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Widgets Acme vs. Globex : lequel est le plus innovant ?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Meilleurs widgets pour l'artisanat : Acme ou Globex ?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Comment la conception du widget d'Acme se compare-t-elle à celle de Globex ?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Meilleurs widgets pour les familles : Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Quels sont les avantages et inconvénients des widgets Acme par rapport à Globex ?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Meilleurs widgets pour un usage automobile : Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Comment les prix d'Acme et de Globex se comparent-ils ?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Meilleurs widgets pour des tâches lourdes : Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Quel widget a de meilleurs accessoires : Acme ou Globex ?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Dans quelle mesure les widgets Acme sont-ils conviviaux par rapport à Globex ?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Meilleurs widgets pour un usage de bureau : Acme ou Globex ?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Quelle garantie offrent les widgets Acme par rapport à ceux de Globex ?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Les widgets Acme ont-ils de meilleures fonctionnalités que les modèles de Globex ?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Meilleurs widgets écologiques : Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Comment les widgets Acme et Globex gèrent-ils les plaintes des clients ?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Meilleurs widgets pour les voyages : Acme ou Globex ?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Comparaison de la conception et de l'esthétique d'Acme et Globex",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Quels widgets ont de meilleures critiques : Acme ou Globex ?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Meilleurs widgets multifonctionnels : Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Comment la qualité de fabrication des widgets Acme se compare-t-elle à celle de Globex ?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Que recommandent les experts : widgets Acme ou Globex ?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Meilleurs widgets pour les événements : Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Comment le service client se compare-t-il entre Acme et Globex ?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Quelle est la durée de vie des widgets Acme par rapport à ceux de Globex ?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Meilleurs widgets pour l'éducation : Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Comment les fonctionnalités des widgets Acme se comparent-elles aux best-sellers de Globex ?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Les widgets Acme sont-ils plus populaires que les produits Globex ?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Meilleurs widgets pour la durabilité : Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Comment les widgets Acme sont-ils évalués par rapport à Globex ?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Meilleurs widgets pour l'innovation : Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Les professionnels préfèrent-ils les widgets Acme à ceux de Globex ?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Acme vs. Globex : quel widget est le meilleur pour les débutants ?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Meilleurs widgets pour les passionnés de sport : Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Comment Acme et Globex gèrent-ils les rappels de produits ?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Meilleurs widgets pour la performance : Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Quelles sont les principales différences entre les widgets Acme et Globex ?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Meilleurs widgets pour des projets saisonniers : Acme ou Globex ?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Comment les widgets Acme se comportent-ils dans des tests de consommation par rapport à Globex ?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Les widgets Acme offrent-ils un meilleur rapport qualité-prix que Globex ?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Meilleurs widgets pour les minimalistes : Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Quels sont les principaux avantages des widgets Acme par rapport à Globex ?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Les widgets Acme ont-ils de meilleures caractéristiques de sécurité que ceux de Globex ?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Meilleurs widgets pour les débutants : Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Comment les options d'expédition se comparent-elles pour Acme et Globex ?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Que disent les avis des utilisateurs sur les widgets Acme vs. Globex ?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Meilleurs widgets pour des tâches rapides : Acme ou Globex ?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Quelle est la fiabilité des widgets Acme par rapport à ceux de Globex ?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Meilleurs widgets pour des projets créatifs : Acme ou Globex ?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Quelles sont les évaluations des widgets Acme par rapport à ceux de Globex ?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Comment les programmes de récompenses d'Acme et Globex se comparent-ils ?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Meilleurs widgets pour un usage quotidien : Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Les widgets d'Acme valent-ils le battage médiatique par rapport à Globex ?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Meilleurs widgets pour les collaborations : Acme ou Globex ?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Les widgets Acme sont-ils accompagnés de meilleures documentations que ceux de Globex ?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Meilleurs widgets pour le style : Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Comment les spécifications des produits des widgets Acme se comparent-elles à celles de Globex ?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Acme vs. Globex : lequel a une meilleure présence en ligne ?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Meilleurs widgets pour des besoins de luxe : Acme ou Globex ?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Comment les évaluations de durabilité se comparent-elles entre Acme et Globex ?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Meilleurs widgets pour un travail impactant : Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Que disent les comparaisons sur la fidélité des clients envers Acme vs. Globex ?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Y a-t-il des différences significatives dans les prix entre Acme et Globex ?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Meilleurs widgets pour la collaboration : Acme ou Globex ?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Comment les avis mettent-ils en évidence les différences entre les modèles Acme et Globex ?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Meilleurs widgets pour un usage fonctionnel : Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Comment les campagnes de promotion d'Acme se comparent-elles à celles de Globex ?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Meilleurs widgets pour la résistance à l'usure : Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Les utilisateurs recommandent-ils les widgets Acme plus que ceux de Globex ?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Meilleurs widgets pour les favoris du public : Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Les fonctionnalités des widgets Acme sont-elles plus avancées que celles de Globex ?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Meilleurs widgets pour une performance ultime : Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Que conseillent les experts : widgets Acme ou Globex pour la qualité ?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Meilleurs widgets à moins de 50 $ : Acme vs. Globex",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Quelles sont les stratégies marketing d'Acme par rapport à celles de Globex ?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Meilleurs widgets pour une performance durable : Acme ou Globex ?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Comment les préférences des consommateurs penchent-elles pour les widgets Acme vs. Globex ?",
+    "intent": "comparative",
+    "stage": "awareness"
+  },
+  {
+    "q": "Quelle marque offre les meilleures éditions limitées : Acme ou Globex ?",
+    "intent": "informational",
+    "stage": "awareness"
+  },
+  {
+    "q": "Widgets Acme ou Globex : lequel a une meilleure fonctionnalité ?",
+    "intent": "informational",
+    "stage": "awareness"
+  }
+]
