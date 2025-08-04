@@ -1,0 +1,18 @@
+{
+  "name": "@viberank/cli",
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "test": "vitest",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@viberank/types": "workspace:*",
+    "commander": "^14.0.0",
+    "zod": "^4.0.14"
+  },
+  "devDependencies": {
+    "@types/node": "^24.1.0",
+    "vitest": "^3.2.4"
+  }
+}
