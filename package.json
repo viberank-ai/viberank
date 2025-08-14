@@ -16,7 +16,11 @@
     "scrape:google": "tsx packages/scraper/src/googleAI.ts",
     "generate:queries:en": "tsx packages/queries/src/generator.ts",
     "expand:queries": "tsx packages/queries/src/translateDedup.ts",
-    "tag:queries": "tsx packages/queries/src/tagger.ts"
+    "tag:queries": "tsx packages/queries/src/tagger.ts",
+    "score:cli": "tsx packages/analysis/src/score.cli.ts",
+    "eval": "tsx packages/eval/run.ts",
+    "eval:ci": "ANALYSIS_DISABLE_LLM=1 EVAL_TOLERANCE=5 tsx packages/eval/run.ts",
+    "eval:rebaseline": "tsx -e \"console.log('Edit packages/eval/golden/samples.json by updating expected scores from current output')\""
   },
   "bin": {
     "ingest-brand": "apps/cli/src/ingestBrand.ts"

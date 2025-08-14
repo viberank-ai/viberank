@@ -1,0 +1,13 @@
+name: Analysis Eval
+on: [pull_request]
+jobs:
+  eval:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 9
+      - run: pnpm install
+      - name: Run deterministic eval
+        run: pnpm eval:ci
