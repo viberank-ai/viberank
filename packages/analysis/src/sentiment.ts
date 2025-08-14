@@ -1,9 +1,16 @@
 import vader from 'vader-sentiment';
 import OpenAI from 'openai';
 
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
+let openai: OpenAI | null = null;
+
+function getOpenAI(): OpenAI {
+  if (!openai) {
+    openai = new OpenAI({
+      apiKey: process.env.OPENAI_API_KEY,
+    });
+  }
+  return openai;
+}
 
 export interface SentimentResult {
   polarity: number; // -1 … 1 (compound)
@@ -22,12 +29,17 @@ export async function classify(text: string): Promise<SentimentResult> {
     return { polarity: compound, stance: quickStance as SentimentResult['stance'] };
   }
 
+  // Skip LLM call if disabled for deterministic evaluation
+  if (process.env.ANALYSIS_DISABLE_LLM === '1') {
+    return { polarity: compound, stance: quickStance as SentimentResult['stance'] };
+  }
+
   /* Fallback: ask LLM for subtle sentiment */
   const prompt = `
     Classify the overall sentiment toward the subject in one word: positive, negative, neutral, or mixed.
     Text: """${text.replace(/\n/g, ' ')}"""
   `;
-  const response = await openai.chat.completions.create({
+  const response = await getOpenAI().chat.completions.create({
     model: 'gpt-4o-mini',
     messages: [{ role: 'user', content: prompt }],
     temperature: 0,
