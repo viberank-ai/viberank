@@ -1,63 +1,128 @@
+/**
+ * Heatmap Component - Visualizes brand coverage across AI platforms
+ *
+ * This client component renders a pivot table showing visibility scores
+ * in a query×surface matrix. Each cell is color-coded from red (low score)
+ * to green (high score) to provide instant visual feedback.
+ *
+ * Features:
+ * - Pivots flat data into matrix format
+ * - Color gradient based on scores (HSL interpolation)
+ * - Special styling for missing/not-present data
+ * - Uses TanStack Table for efficient rendering
+ *
+ * Color coding:
+ * - Gray: No data or brand not mentioned
+ * - Red (0°): Score near 0 (poor visibility)
+ * - Yellow (60°): Score around 50 (moderate visibility)
+ * - Green (120°): Score near 100 (excellent visibility)
+ */
+
 'use client';
 
 import { useMemo } from 'react';
 import { ColumnDef, flexRender, getCoreRowModel, useReactTable } from '@tanstack/react-table';
 
-type Row = { query: string; surface: string; score: number; present: boolean; authority: boolean };
-
-type PivotRow = {
-  query: string;
-  [key: string]: string | number | boolean | null;
+/** Row - Analysis result from API (matches dashboard/page.tsx) */
+type Row = {
+  query: string; // Search query
+  surface: string; // AI platform
+  score: number; // Visibility score (0-100)
+  present: boolean; // Brand mentioned
+  authority: boolean; // Brand cited
 };
 
+/** PivotRow - Transformed data structure for table display
+ * One row per query with surface scores as columns */
+type PivotRow = {
+  query: string;
+  [key: string]: string | number | boolean | null; // Dynamic keys for each surface
+};
+
+/** CellInfo - TanStack Table cell rendering context */
 interface CellInfo {
-  getValue: () => unknown;
-  row: { original: PivotRow };
+  getValue: () => unknown; // Get cell value
+  row: { original: PivotRow }; // Access full row data
 }
 
+/**
+ * colorForScore - Generates CSS classes for score-based coloring
+ *
+ * Uses HSL color space for smooth gradient:
+ * - Hue: 0° (red) to 120° (green) based on score
+ * - Saturation: 90% for vibrant colors
+ * - Lightness: 60% for good contrast with black text
+ *
+ * @param score - Visibility score (0-100)
+ * @param present - Whether brand was mentioned
+ * @returns Tailwind CSS classes for cell styling
+ */
 function colorForScore(score: number, present: boolean) {
+  // Gray background if brand not mentioned at all
   if (!present) return 'bg-slate-800 text-slate-400';
-  // 0 -> red(0deg), 100 -> green(120deg)
+
+  // Linear interpolation: 0 score = red (0°), 100 score = green (120°)
   const hue = Math.round((score / 100) * 120);
+
+  // Use HSL with dynamic hue for smooth gradient
+  // bg-[hsl(...)] is Tailwind's arbitrary value syntax
   return `text-black` + ` ` + `bg-[hsl(${hue},90%,60%)]`;
 }
 
+/**
+ * Heatmap - Main heat-map component
+ *
+ * Transforms flat row data into a pivot table for visualization.
+ * Each query becomes a row, each surface becomes a column.
+ *
+ * @param rows - Flat array of analysis results from API
+ * @returns Rendered heat-map table
+ */
 export default function Heatmap({ rows }: { rows: Row[] }) {
+  // Extract unique surfaces and queries for table structure
   const surfaces = Array.from(new Set(rows.map((r) => r.surface))).sort();
   const queries = Array.from(new Set(rows.map((r) => r.query)));
 
-  // Pivot rows: one row per query; columns per surface
+  // Transform flat data into pivot table structure
+  // Creates one row per query with surface scores as dynamic columns
   const pivot: PivotRow[] = queries.map((q) => {
     const record: PivotRow = { query: q };
+
+    // Add score and presence data for each surface
     surfaces.forEach((s) => {
       const r = rows.find((rr) => rr.query === q && rr.surface === s);
-      record[s] = r ? r.score : null;
-      record[`${s}:present`] = r?.present ?? false;
+      record[s] = r ? r.score : null; // Score value for cell
+      record[`${s}:present`] = r?.present ?? false; // Presence flag for coloring
     });
+
     return record;
   });
 
+  // Define table columns with TanStack Table
   const columns = useMemo<ColumnDef<PivotRow>[]>(
     () => [
+      // Query column (row headers)
       {
         header: 'Query',
         accessorKey: 'query',
         cell: (info: CellInfo) => <span className="text-sm">{info.getValue() as string}</span>,
       },
+      // Dynamic columns for each surface
       ...surfaces.map((s) => ({
-        header: s.replace('_', ' '),
+        header: s.replace('_', ' '), // Humanize surface names
         accessorKey: s,
         cell: (info: CellInfo) => {
-          const v = info.getValue() as number | null;
-          const present = info.row.original[`${s}:present`] as boolean;
+          const v = info.getValue() as number | null; // Score value
+          const present = info.row.original[`${s}:present`] as boolean; // Presence flag
+
           return (
             <div
               className={
                 'text-center rounded px-2 py-1 ' +
-                (v == null ? 'bg-slate-900' : colorForScore(v, present))
+                (v == null ? 'bg-slate-900' : colorForScore(v, present)) // Apply color coding
               }
             >
-              {v == null ? '-' : v}
+              {v == null ? '-' : v} {/* Show dash for missing data */}
             </div>
           );
         },
