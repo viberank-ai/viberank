@@ -1,6 +1,5 @@
 import { NextResponse } from 'next/server';
 import { createJob, updateJob } from '../../../lib/jobs';
-import { runScan } from '../../../../../packages/pipeline/src/runScan';
 import { Surface } from '../../../../../packages/types/src/snapshot';
 
 interface ScanRequestBody {
@@ -22,6 +21,10 @@ export async function POST(req: Request) {
   (async () => {
     try {
       updateJob(job.id, { state: 'running' });
+
+      // Dynamic import to avoid pulling in scraper dependencies at module level
+      const { runScan } = await import('../../../../../packages/pipeline/src/runScan');
+
       const s = (surfaces as string).split(',').filter(Boolean) as Surface[];
       const res = await runScan({
         limit: Number(limit),
@@ -32,9 +35,13 @@ export async function POST(req: Request) {
       });
       updateJob(job.id, { state: 'done', progress: 1, result: res });
     } catch (e) {
+      console.error('Scan failed:', e);
       updateJob(job.id, {
         state: 'error',
-        error: e instanceof Error ? e.message : 'unknown error',
+        error:
+          e instanceof Error
+            ? e.message
+            : 'Scan failed - scraping modules may not be available in this environment',
       });
     }
   })();
