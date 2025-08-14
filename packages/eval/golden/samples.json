@@ -1,0 +1,26 @@
+[
+  {
+    "id": "g1",
+    "surface": "google_ai",
+    "query": "What is VibeRank?",
+    "brand": { "name": "VibeRank", "altSpellings": ["Vibe Rank"], "competitors": ["Globex"] },
+    "html": "<div class='answer'>VibeRank is an AI tool for generative search optimization.</div><a href=\"https://viberank.com\">Official site</a>",
+    "expected": { "present": true, "authority": true, "polarityRange": [0.1, 0.8], "score": 69 }
+  },
+  {
+    "id": "g2",
+    "surface": "bing_copilot",
+    "query": "VibeRank vs Globex",
+    "brand": { "name": "VibeRank", "altSpellings": [], "competitors": ["Globex"] },
+    "html": "<p>Compared with Globex, VibeRank offers faster reporting.</p>",
+    "expected": { "present": true, "authority": false, "polarityRange": [0.0, 0.7], "score": 30 }
+  },
+  {
+    "id": "g3",
+    "surface": "chatgpt",
+    "query": "Is VibeRank a scam?",
+    "brand": { "name": "VibeRank", "altSpellings": [], "competitors": [] },
+    "html": "<p>There is no evidence that VibeRank is a scam, but always evaluate tools carefully.</p>",
+    "expected": { "present": true, "authority": false, "polarityRange": [-0.4, 0.6], "score": 21 }
+  }
+]
