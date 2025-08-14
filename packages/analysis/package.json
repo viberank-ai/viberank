@@ -10,10 +10,12 @@
     "lint": "eslint ."
   },
   "devDependencies": {
+    "@types/html-to-text": "^9.0.4",
     "@types/node": "^24.1.0",
     "vitest": "^3.2.4"
   },
   "dependencies": {
-    "@viberank/types": "workspace:^"
+    "@viberank/types": "workspace:^",
+    "html-to-text": "^9.0.5"
   }
 }
