@@ -20,7 +20,10 @@
     "score:cli": "tsx packages/analysis/src/score.cli.ts",
     "eval": "tsx packages/eval/run.ts",
     "eval:ci": "ANALYSIS_DISABLE_LLM=1 EVAL_TOLERANCE=5 tsx packages/eval/run.ts",
-    "eval:rebaseline": "tsx -e \"console.log('Edit packages/eval/golden/samples.json by updating expected scores from current output')\""
+    "eval:rebaseline": "tsx -e \"console.log('Edit packages/eval/golden/samples.json by updating expected scores from current output')\"",
+    "web:dev": "pnpm -C apps/web dev",
+    "web:build": "pnpm -C apps/web build",
+    "web:start": "pnpm -C apps/web start"
   },
   "bin": {
     "ingest-brand": "apps/cli/src/ingestBrand.ts"
