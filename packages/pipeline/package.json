@@ -1,0 +1,7 @@
+{
+  "name": "@viberank/pipeline",
+  "version": "0.0.0",
+  "type": "module",
+  "main": "src/runScan.ts",
+  "types": "src/runScan.ts"
+}
