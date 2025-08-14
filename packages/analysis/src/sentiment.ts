@@ -1,4 +1,4 @@
-import vader from 'vader-sentiment';
+const vader = require('vader-sentiment');
 import OpenAI from 'openai';
 
 let openai: OpenAI | null = null;
