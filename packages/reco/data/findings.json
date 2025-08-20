@@ -1,0 +1,71 @@
+[
+  {
+    "id": "NO_AUTHORITY_CITATION-c55af800",
+    "code": "NO_AUTHORITY_CITATION",
+    "title": "Branded sources not cited",
+    "description": "Answers discuss the brand but link to third-party sites; adding authoritative brand pages and schema may improve citation.",
+    "count": 2,
+    "sample": [
+      {
+        "query": "what is viberank",
+        "surface": "google_ai",
+        "score": 40,
+        "present": true,
+        "authority": false
+      },
+      {
+        "query": "viberank vs globex",
+        "surface": "bing_copilot",
+        "score": 45,
+        "present": true,
+        "authority": false
+      }
+    ]
+  },
+  {
+    "id": "NO_BRAND_MENTION-bfcd4da1",
+    "code": "NO_BRAND_MENTION",
+    "title": "Brand not represented for these queries",
+    "description": "The brand is missing in answers; likely a content gap or query intents not covered by current pages.",
+    "count": 1,
+    "sample": [
+      {
+        "query": "is viberank legit",
+        "surface": "perplexity",
+        "score": 20,
+        "present": false,
+        "authority": false
+      }
+    ]
+  },
+  {
+    "id": "PRODUCT_GAP-e3ac6ab8",
+    "code": "PRODUCT_GAP",
+    "title": "No product‑level coverage",
+    "description": "Queries do not match any known product; build product or use‑case pages aligned to search intent.",
+    "count": 3,
+    "sample": [
+      {
+        "query": "what is viberank",
+        "surface": "google_ai",
+        "score": 40,
+        "present": true,
+        "authority": false
+      },
+      {
+        "query": "viberank vs globex",
+        "surface": "bing_copilot",
+        "score": 45,
+        "present": true,
+        "authority": false
+      },
+      {
+        "query": "is viberank legit",
+        "surface": "perplexity",
+        "score": 20,
+        "present": false,
+        "authority": false
+      }
+    ]
+  }
+]

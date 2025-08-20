@@ -24,7 +24,8 @@
     "scan": "tsx packages/pipeline/src/runScan.ts limit=20 surfaces=google_ai,bing_copilot,perplexity",
     "web:dev": "pnpm -C apps/web dev",
     "web:build": "pnpm -C apps/web build",
-    "web:start": "pnpm -C apps/web start"
+    "web:start": "pnpm -C apps/web start",
+    "reco:hypotheses": "tsx packages/reco/src/hypotheses.ts"
   },
   "bin": {
     "ingest-brand": "apps/cli/src/ingestBrand.ts"
