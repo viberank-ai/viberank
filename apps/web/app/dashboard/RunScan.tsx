@@ -53,12 +53,34 @@ export default function RunScan() {
     setState('queued');
     setProgress(0);
 
-    // Trigger scan with default parameters
+    // Get brand configuration and project info from localStorage
+    const brandConfig = localStorage.getItem('brandConfig');
+    const generatedQueries = localStorage.getItem('generatedQueries');
+    const currentProject = localStorage.getItem('currentProject');
+
+    const requestBody: Record<string, unknown> = {
+      limit: 20,
+      surfaces: 'google_ai,perplexity',
+    };
+
+    // Add project ID if available
+    if (currentProject) {
+      const project = JSON.parse(currentProject);
+      requestBody.projectId = project.id;
+    }
+
+    // Add brand configuration if available
+    if (brandConfig) {
+      requestBody.brand = JSON.parse(brandConfig);
+    }
+    if (generatedQueries) {
+      requestBody.queries = JSON.parse(generatedQueries);
+    }
+
+    // Trigger scan with brand configuration
     const res = await fetch('/api/scan', {
       method: 'POST',
-      body: JSON.stringify({
-        limit: 20, // Process 20 queries (uses default surfaces from API)
-      }),
+      body: JSON.stringify(requestBody),
       headers: { 'Content-Type': 'application/json' },
     });
 
@@ -89,7 +111,32 @@ export default function RunScan() {
       // Check if job is complete
       if (r.state === 'done' || r.state === 'error') {
         clearInterval(t); // Stop polling
-        location.reload(); // Refresh page to show new data in heat-map
+
+        // Update project's last scan timestamp
+        if (r.state === 'done') {
+          const currentProject = localStorage.getItem('currentProject');
+          if (currentProject) {
+            const project = JSON.parse(currentProject);
+            project.lastScanned = new Date().toISOString();
+            localStorage.setItem('currentProject', JSON.stringify(project));
+
+            // Also update in projects list
+            const projects = JSON.parse(localStorage.getItem('projects') || '[]');
+            const projectIndex = projects.findIndex((p: { id: string }) => p.id === project.id);
+            if (projectIndex !== -1) {
+              projects[projectIndex].lastScanned = project.lastScanned;
+              localStorage.setItem('projects', JSON.stringify(projects));
+            }
+          }
+
+          // Add a small delay to ensure file is written
+          setTimeout(() => {
+            location.reload(); // Refresh page to show new data in heat-map
+          }, 500);
+        } else {
+          // Error case - still reload to reset UI
+          location.reload();
+        }
       }
     }, 1500); // Poll every 1.5 seconds
 
