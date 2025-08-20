@@ -65,6 +65,18 @@ export type Job<T = unknown> = {
  */
 const jobs = new Map<string, Job>();
 
+// In development, jobs might get lost due to hot reloads
+// Store them in a more persistent way
+if (typeof global !== 'undefined') {
+  // @ts-expect-error global property for dev persistence
+  global.__viberank_jobs = global.__viberank_jobs || new Map();
+  // Copy existing jobs from global storage
+  // @ts-expect-error accessing global property
+  for (const [id, job] of global.__viberank_jobs) {
+    jobs.set(id, job);
+  }
+}
+
 /**
  * createJob - Creates a new job in queued state
  *
@@ -85,6 +97,14 @@ export function createJob(): Job {
     createdAt: Date.now(),
   };
   jobs.set(id, job);
+  // Also store in global for dev persistence
+  if (typeof global !== 'undefined') {
+    // @ts-expect-error global property for dev persistence
+    global.__viberank_jobs = global.__viberank_jobs || new Map();
+    // @ts-expect-error accessing global property
+    global.__viberank_jobs.set(id, job);
+  }
+  console.log('Created job:', id, 'Total jobs:', jobs.size);
   return job;
 }
 /**
@@ -97,7 +117,9 @@ export function createJob(): Job {
  * - app/api/scan/[id]/route.ts: For status polling
  */
 export function getJob(id: string) {
-  return jobs.get(id) || null;
+  const job = jobs.get(id) || null;
+  console.log('Getting job:', id, 'Found:', !!job, 'Total jobs:', jobs.size);
+  return job;
 }
 /**
  * updateJob - Updates job properties
@@ -113,12 +135,36 @@ export function getJob(id: string) {
  * - app/api/scan/route.ts: Sets final state and results
  */
 export function updateJob<T>(id: string, patch: Partial<Job<T>>) {
-  const j = jobs.get(id);
-  if (!j) return;
+  let j = jobs.get(id);
+
+  // If not found in current map, try global storage (dev hot reload recovery)
+  if (!j && typeof global !== 'undefined') {
+    // @ts-expect-error accessing global property
+    const globalJobs = global.__viberank_jobs;
+    if (globalJobs) {
+      j = globalJobs.get(id);
+      if (j) {
+        jobs.set(id, j); // Restore to current map
+      }
+    }
+  }
+
+  if (!j) {
+    console.log('Cannot update job - not found:', id);
+    return;
+  }
 
   // Merge patch into existing job
   Object.assign(j, patch);
 
-  // Re-set to ensure Map updates (though not strictly necessary)
+  // Re-set to ensure Map updates
   jobs.set(id, j);
+  // Also update global storage
+  if (typeof global !== 'undefined') {
+    // @ts-expect-error global property for dev persistence
+    global.__viberank_jobs = global.__viberank_jobs || new Map();
+    // @ts-expect-error accessing global property
+    global.__viberank_jobs.set(id, j);
+  }
+  console.log('Updated job:', id, 'New state:', j.state, 'Progress:', j.progress);
 }

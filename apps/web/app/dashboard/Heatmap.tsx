@@ -64,9 +64,9 @@ function colorForScore(score: number, present: boolean) {
   // Linear interpolation: 0 score = red (0°), 100 score = green (120°)
   const hue = Math.round((score / 100) * 120);
 
-  // Use HSL with dynamic hue for smooth gradient
+  // Use HSL with dynamic hue for smooth gradient and white text for contrast
   // bg-[hsl(...)] is Tailwind's arbitrary value syntax
-  return `text-black` + ` ` + `bg-[hsl(${hue},90%,60%)]`;
+  return `text-white font-semibold` + ` ` + `bg-[hsl(${hue},90%,50%)]`;
 }
 
 /**
@@ -79,9 +79,24 @@ function colorForScore(score: number, present: boolean) {
  * @returns Rendered heat-map table
  */
 export default function Heatmap({ rows }: { rows: Row[] }) {
+  // Debug: Check if we have data
+  console.log('Heatmap received rows:', rows);
+
+  // Handle empty data case
+  if (!rows || rows.length === 0) {
+    return (
+      <div className="p-8 text-center border border-slate-800 rounded">
+        <p className="text-slate-400">No data available. Run a scan to populate the heatmap.</p>
+      </div>
+    );
+  }
+
   // Extract unique surfaces and queries for table structure
   const surfaces = Array.from(new Set(rows.map((r) => r.surface))).sort();
   const queries = Array.from(new Set(rows.map((r) => r.query)));
+
+  console.log('Surfaces:', surfaces);
+  console.log('Queries:', queries);
 
   // Transform flat data into pivot table structure
   // Creates one row per query with surface scores as dynamic columns
@@ -149,7 +164,7 @@ export default function Heatmap({ rows }: { rows: Row[] }) {
         </thead>
         <tbody>
           {table.getRowModel().rows.map((r) => (
-            <tr key={r.id} className="odd:bg-slate-950 even:bg-slate-925">
+            <tr key={r.id} className="border-b border-slate-800">
               {r.getVisibleCells().map((c) => (
                 <td key={c.id} className="p-1">
                   {flexRender(c.column.columnDef.cell, c.getContext())}

@@ -18,6 +18,8 @@
 import { NextResponse } from 'next/server';
 import { createJob, updateJob } from '../../../lib/jobs';
 import { Surface } from '../../../../../packages/types/src/snapshot';
+import fs from 'fs/promises';
+import path from 'path';
 
 /**
  * ScanRequestBody - Request parameters for initiating a scan
@@ -27,11 +29,25 @@ interface ScanRequestBody {
   limit?: number;
 
   /** Comma-separated list of surfaces to scan
-   * Default: "google_ai,bing_copilot,perplexity" */
+   * Default: "google_ai,perplexity" */
   surfaces?: string;
 
   /** Max parallel scraping operations (default: 2) */
   concurrency?: number;
+
+  /** Brand configuration for scanning */
+  brand?: {
+    name: string;
+    altSpellings?: string[];
+    products?: string[];
+    competitors?: string[];
+  };
+
+  /** Custom queries to use */
+  queries?: string[];
+
+  /** Project ID for organizing results */
+  projectId?: string;
 }
 
 /**
@@ -54,7 +70,7 @@ export async function POST(req: Request) {
   // Extract parameters with defaults
   const {
     limit = 20,
-    surfaces = 'google_ai,bing_copilot,perplexity', // ChatGPT excluded by default
+    surfaces = 'google_ai,perplexity', // ChatGPT excluded by default due to auth requirements
     concurrency = 2,
   } = body || {};
 
@@ -87,13 +103,54 @@ export async function POST(req: Request) {
         // Expected in development - Puppeteer doesn't work with Next.js Edge runtime
         console.warn('Real scrapers failed, falling back to mock data:', scraperError);
 
+        // Get brand configuration from localStorage equivalent
+        const brandConfig = body.brand || { name: 'VibeRank' };
+        const queries = body.queries || undefined;
+
         // Use mock implementation that generates synthetic data
         const { mockRunScan } = await import('./mock-scan');
         res = await mockRunScan({
           limit: Number(limit),
           surfaces: s,
+          brand: brandConfig,
+          queries,
           onProgress: (d, t) => updateJob(job.id, { progress: d / t }),
         });
+      }
+
+      // Save scan results for dashboard to display (project-specific)
+      try {
+        const dataDir = path.resolve(process.cwd(), '..', '..', 'data');
+        await fs.mkdir(dataDir, { recursive: true });
+
+        // Use project ID if provided, otherwise use brand name as fallback
+        const projectId =
+          body.projectId ||
+          (body.brand?.name ? body.brand.name.toLowerCase().replace(/\s+/g, '-') : 'default');
+        const scanResultsFile = path.join(dataDir, `scan-results-${projectId}.json`);
+
+        await fs.writeFile(
+          scanResultsFile,
+          JSON.stringify(
+            {
+              projectId,
+              brand: body.brand || { name: 'VibeRank' },
+              queries: body.queries || [],
+              surfaces: s,
+              rows: res.rows || [],
+              timestamp: new Date().toISOString(),
+            },
+            null,
+            2
+          )
+        );
+
+        console.log(
+          `Saved ${res.rows?.length || 0} scan results for project ${projectId} to:`,
+          scanResultsFile
+        );
+      } catch (saveError) {
+        console.error('Failed to save scan results:', saveError);
       }
 
       // Mark job as complete with results

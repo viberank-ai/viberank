@@ -32,12 +32,33 @@ import { getJob } from '../../../../lib/jobs';
  * - result: Scan results (when state is 'done')
  * - error: Error message (when state is 'error')
  */
-export async function GET(_: Request, { params }: { params: { id: string } }) {
+export async function GET(
+  _: Request,
+  context: { params: { id: string } } | { params: Promise<{ id: string }> }
+) {
+  // Handle both Next.js 14 and 15 params
+  let id: string;
+  if ('then' in context.params) {
+    // Next.js 15+ with Promise params
+    const resolved = await context.params;
+    id = resolved.id;
+  } else {
+    // Next.js 14 with direct params
+    id = context.params.id;
+  }
+
+  console.log('Looking for job:', id);
+
   // Look up job in the in-memory store
-  const job = getJob(params.id);
+  const job = getJob(id);
 
   // Return 404 if job doesn't exist or has expired
-  if (!job) return new NextResponse('Not found', { status: 404 });
+  if (!job) {
+    console.log('Job not found:', id);
+    return new NextResponse('Not found', { status: 404 });
+  }
+
+  console.log('Job found:', id, 'state:', job.state);
 
   // Return full job details for client polling
   return NextResponse.json(job);
