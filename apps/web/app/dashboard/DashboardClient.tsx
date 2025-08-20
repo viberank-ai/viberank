@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import Heatmap from './Heatmap';
 import RunScan from './RunScan';
+import ShareButton from './ShareButton';
 
 type Row = {
   query: string;
@@ -138,6 +139,7 @@ export default function DashboardClient() {
           <a href="/setup" className="text-blue-400 hover:text-blue-300 text-sm underline">
             Configure Brand
           </a>
+          <ShareButton />
           <RunScan />
         </div>
       </div>
