@@ -1,0 +1,14 @@
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "what is viberank",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Answer this briefly with your product facts."
+      }
+    }
+  ]
+}

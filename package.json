@@ -28,6 +28,7 @@
     "reco:hypotheses": "tsx packages/reco/src/hypotheses.ts",
     "reco:actions": "tsx packages/reco/src/run-actions.ts",
     "reco:prioritize": "ts-node packages/reco/src/prioritize.ts",
+    "reco:jsonld": "ts-node packages/reco/src/jsonld.ts",
     "reco:all": "pnpm -w tsx packages/reco/src/hypotheses.ts && pnpm -w tsx packages/reco/src/actions.ts && pnpm -w tsx packages/reco/src/prioritize.ts"
   },
   "bin": {
