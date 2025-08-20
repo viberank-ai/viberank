@@ -26,7 +26,9 @@
     "web:build": "pnpm -C apps/web build",
     "web:start": "pnpm -C apps/web start",
     "reco:hypotheses": "tsx packages/reco/src/hypotheses.ts",
-    "reco:actions": "tsx packages/reco/src/run-actions.ts"
+    "reco:actions": "tsx packages/reco/src/run-actions.ts",
+    "reco:prioritize": "ts-node packages/reco/src/prioritize.ts",
+    "reco:all": "pnpm -w tsx packages/reco/src/hypotheses.ts && pnpm -w tsx packages/reco/src/actions.ts && pnpm -w tsx packages/reco/src/prioritize.ts"
   },
   "bin": {
     "ingest-brand": "apps/cli/src/ingestBrand.ts"
