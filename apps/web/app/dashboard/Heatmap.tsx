@@ -20,8 +20,9 @@
 
 'use client';
 
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
 import { ColumnDef, flexRender, getCoreRowModel, useReactTable } from '@tanstack/react-table';
+import SnapshotModal from './SnapshotModal';
 
 /** Row - Analysis result from API (matches dashboard/page.tsx) */
 type Row = {
@@ -82,6 +83,8 @@ export default function Heatmap({ rows }: { rows: Row[] }) {
   // Debug: Check if we have data
   console.log('Heatmap received rows:', rows);
 
+  const [sel, setSel] = useState<{ q: string; s: string } | null>(null);
+
   // Handle empty data case
   if (!rows || rows.length === 0) {
     return (
@@ -129,14 +132,13 @@ export default function Heatmap({ rows }: { rows: Row[] }) {
         cell: (info: CellInfo) => {
           const v = info.getValue() as number | null; // Score value
           const present = info.row.original[`${s}:present`] as boolean; // Presence flag
+          const q = info.row.original.query as string;
+          const cls =
+            'text-center rounded px-2 py-1 cursor-pointer ' +
+            (v == null ? 'bg-slate-900' : colorForScore(v, present));
 
           return (
-            <div
-              className={
-                'text-center rounded px-2 py-1 ' +
-                (v == null ? 'bg-slate-900' : colorForScore(v, present)) // Apply color coding
-              }
-            >
+            <div className={cls} onClick={() => v != null && setSel({ q, s })}>
               {v == null ? '-' : v} {/* Show dash for missing data */}
             </div>
           );
@@ -149,31 +151,34 @@ export default function Heatmap({ rows }: { rows: Row[] }) {
   const table = useReactTable({ data: pivot, columns, getCoreRowModel: getCoreRowModel() });
 
   return (
-    <div className="overflow-x-auto border border-slate-800 rounded">
-      <table className="min-w-full text-sm">
-        <thead className="bg-slate-900 sticky top-0">
-          {table.getHeaderGroups().map((hg) => (
-            <tr key={hg.id}>
-              {hg.headers.map((h) => (
-                <th key={h.id} className="text-left p-2 font-medium">
-                  {flexRender(h.column.columnDef.header, h.getContext())}
-                </th>
-              ))}
-            </tr>
-          ))}
-        </thead>
-        <tbody>
-          {table.getRowModel().rows.map((r) => (
-            <tr key={r.id} className="border-b border-slate-800">
-              {r.getVisibleCells().map((c) => (
-                <td key={c.id} className="p-1">
-                  {flexRender(c.column.columnDef.cell, c.getContext())}
-                </td>
-              ))}
-            </tr>
-          ))}
-        </tbody>
-      </table>
+    <div className="relative">
+      <div className="overflow-x-auto border border-slate-800 rounded">
+        <table className="min-w-full text-sm">
+          <thead className="bg-slate-900 sticky top-0">
+            {table.getHeaderGroups().map((hg) => (
+              <tr key={hg.id}>
+                {hg.headers.map((h) => (
+                  <th key={h.id} className="text-left p-2 font-medium">
+                    {flexRender(h.column.columnDef.header, h.getContext())}
+                  </th>
+                ))}
+              </tr>
+            ))}
+          </thead>
+          <tbody>
+            {table.getRowModel().rows.map((r) => (
+              <tr key={r.id} className="border-b border-slate-800">
+                {r.getVisibleCells().map((c) => (
+                  <td key={c.id} className="p-1">
+                    {flexRender(c.column.columnDef.cell, c.getContext())}
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      {sel && <SnapshotModal query={sel.q} surface={sel.s} onClose={() => setSel(null)} />}
     </div>
   );
 }
