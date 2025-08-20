@@ -1,0 +1,73 @@
+{
+  "projectId": "1755678564781",
+  "brand": {
+    "name": "iPhone",
+    "altSpellings": [],
+    "products": [],
+    "competitors": []
+  },
+  "queries": [],
+  "surfaces": [
+    "google_ai",
+    "perplexity"
+  ],
+  "rows": [
+    {
+      "query": "what is iPhone",
+      "surface": "google_ai",
+      "score": 72,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "what is iPhone",
+      "surface": "perplexity",
+      "score": 88,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "iPhone review",
+      "surface": "google_ai",
+      "score": 67,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "iPhone review",
+      "surface": "perplexity",
+      "score": 91,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "iPhone vs competitors",
+      "surface": "google_ai",
+      "score": 86,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "iPhone vs competitors",
+      "surface": "perplexity",
+      "score": 83,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "is iPhone good",
+      "surface": "google_ai",
+      "score": 89,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "is iPhone good",
+      "surface": "perplexity",
+      "score": 90,
+      "present": true,
+      "authority": true
+    }
+  ],
+  "timestamp": "2025-08-20T16:25:28.654Z"
+}

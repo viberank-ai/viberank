@@ -1,0 +1,73 @@
+{
+  "projectId": "1755678977435",
+  "brand": {
+    "name": "piss",
+    "altSpellings": [],
+    "products": [],
+    "competitors": []
+  },
+  "queries": [],
+  "surfaces": [
+    "google_ai",
+    "perplexity"
+  ],
+  "rows": [
+    {
+      "query": "what is piss",
+      "surface": "google_ai",
+      "score": 86,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "what is piss",
+      "surface": "perplexity",
+      "score": 90,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "piss review",
+      "surface": "google_ai",
+      "score": 93,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "piss review",
+      "surface": "perplexity",
+      "score": 53,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "piss vs competitors",
+      "surface": "google_ai",
+      "score": 84,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "piss vs competitors",
+      "surface": "perplexity",
+      "score": 74,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "is piss good",
+      "surface": "google_ai",
+      "score": 86,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "is piss good",
+      "surface": "perplexity",
+      "score": 87,
+      "present": true,
+      "authority": true
+    }
+  ],
+  "timestamp": "2025-08-20T16:16:28.187Z"
+}

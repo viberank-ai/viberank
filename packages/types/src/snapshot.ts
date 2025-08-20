@@ -3,7 +3,6 @@
  *
  * Each surface represents a different AI-powered search interface:
  * - google_ai: Google's AI Overview feature in search results
- * - bing_copilot: Microsoft Bing's Copilot AI assistant
  * - chatgpt: OpenAI's ChatGPT with web browsing capabilities
  * - perplexity: Perplexity AI's search engine
  *
@@ -12,7 +11,7 @@
  * - pipeline/src/runScan.ts: Loads appropriate scraper based on surface
  * - web/app/dashboard/Heatmap.tsx: Displays results grouped by surface
  */
-export type Surface = 'google_ai' | 'bing_copilot' | 'chatgpt' | 'perplexity';
+export type Surface = 'google_ai' | 'chatgpt' | 'perplexity';
 
 /**
  * Snapshot - Raw scraped data from an AI search engine response

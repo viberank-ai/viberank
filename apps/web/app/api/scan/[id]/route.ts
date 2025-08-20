@@ -15,7 +15,7 @@
  */
 
 import { NextResponse } from 'next/server';
-import { getJob } from '../../../../lib/jobs';
+import { getJob, getJobsMap } from '../../../../lib/jobs';
 
 /**
  * GET /api/scan/[id] - Retrieves job status and results
@@ -54,11 +54,26 @@ export async function GET(
 
   // Return 404 if job doesn't exist or has expired
   if (!job) {
-    console.log('Job not found:', id);
-    return new NextResponse('Not found', { status: 404 });
+    console.log(
+      'Job not found:',
+      id,
+      'Available jobs:',
+      Array.from(getJobsMap()).map(([id, j]) => ({ id, state: j.state }))
+    );
+    return new NextResponse(
+      JSON.stringify({
+        error: 'Job not found',
+        jobId: id,
+        timestamp: new Date().toISOString(),
+      }),
+      {
+        status: 404,
+        headers: { 'Content-Type': 'application/json' },
+      }
+    );
   }
 
-  console.log('Job found:', id, 'state:', job.state);
+  console.log('Job found:', id, 'state:', job.state, 'progress:', job.progress);
 
   // Return full job details for client polling
   return NextResponse.json(job);
