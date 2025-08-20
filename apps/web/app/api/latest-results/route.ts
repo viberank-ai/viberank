@@ -36,8 +36,13 @@ export async function GET(request: Request) {
     const dataDir = path.resolve(process.cwd(), '..', '..', 'data');
 
     if (projectId) {
+      // Sanitize project ID to match what's used in scan route
+      const sanitizedProjectId =
+        projectId.replace(/[^a-zA-Z0-9-_]/g, '').substring(0, 50) || 'default';
+      console.log('Original projectId:', projectId, 'Sanitized:', sanitizedProjectId);
+
       // Try project-specific file first
-      const projectScanFile = path.join(dataDir, `scan-results-${projectId}.json`);
+      const projectScanFile = path.join(dataDir, `scan-results-${sanitizedProjectId}.json`);
       console.log('Looking for project scan results at:', projectScanFile);
 
       try {
@@ -64,28 +69,19 @@ export async function GET(request: Request) {
       }
     }
 
-    // Fall back to legacy global file for backward compatibility
-    const scanResultsFile = path.join(dataDir, 'latest-scan-results.json');
-
-    try {
-      const scanResults = await fs.readFile(scanResultsFile, 'utf-8');
-      const { rows, brand, timestamp, queries, surfaces } = JSON.parse(scanResults);
-      console.log('Found legacy scan results:', rows?.length, 'rows');
-      if (rows && rows.length > 0) {
-        return NextResponse.json({
-          rows,
-          source: 'scan',
-          timestamp: timestamp || new Date().toISOString(),
-          brand,
-          queries,
-          surfaces,
-        });
-      }
-    } catch {
-      console.log('No scan results found');
-      // No scan results available, fall back to golden samples
+    // NO FALLBACK TO GLOBAL FILE - each project should be isolated
+    // If no project-specific results exist, return empty
+    if (projectId) {
+      // For project-specific requests, return empty if no data found
+      return NextResponse.json({
+        rows: [],
+        source: 'error',
+        timestamp: new Date().toISOString(),
+        error: 'No scan results for this project',
+      });
     }
 
+    // Only fall back to golden samples if no projectId was provided
     // Fallback to golden samples
     const root = path.resolve(process.cwd(), '..', '..');
     const file = path.join(root, 'packages', 'eval', 'golden', 'samples.json');

@@ -56,6 +56,7 @@ export default function ProjectSetup() {
     const newProject = {
       id: Date.now().toString(),
       name: brand.name,
+      brand: brand, // Store the complete brand configuration
       altSpellings: brand.altSpellings,
       products: brand.products,
       competitors: brand.competitors,

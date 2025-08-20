@@ -1,0 +1,73 @@
+{
+  "projectId": "1755677196985",
+  "brand": {
+    "name": "Bing",
+    "altSpellings": [],
+    "products": [],
+    "competitors": []
+  },
+  "queries": [],
+  "surfaces": [
+    "google_ai",
+    "perplexity"
+  ],
+  "rows": [
+    {
+      "query": "what is Bing",
+      "surface": "google_ai",
+      "score": 73,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "what is Bing",
+      "surface": "perplexity",
+      "score": 91,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "Bing review",
+      "surface": "google_ai",
+      "score": 79,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "Bing review",
+      "surface": "perplexity",
+      "score": 65,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "Bing vs competitors",
+      "surface": "google_ai",
+      "score": 77,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "Bing vs competitors",
+      "surface": "perplexity",
+      "score": 66,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "is Bing good",
+      "surface": "google_ai",
+      "score": 68,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "is Bing good",
+      "surface": "perplexity",
+      "score": 85,
+      "present": true,
+      "authority": true
+    }
+  ],
+  "timestamp": "2025-08-20T16:30:26.227Z"
+}

@@ -168,3 +168,11 @@ export function updateJob<T>(id: string, patch: Partial<Job<T>>) {
   }
   console.log('Updated job:', id, 'New state:', j.state, 'Progress:', j.progress);
 }
+
+/**
+ * getJobsMap - Returns the current jobs Map for debugging
+ * @returns The jobs Map
+ */
+export function getJobsMap() {
+  return jobs;
+}

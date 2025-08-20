@@ -42,6 +42,11 @@ export default function RunScan() {
   // Current job state for UI updates
   const [state, setState] = useState<'idle' | 'queued' | 'running' | 'done' | 'error'>('idle');
 
+  // Debug state changes
+  useEffect(() => {
+    console.log('STATE CHANGED - jobId:', jobId, 'state:', state, 'progress:', progress);
+  }, [jobId, state, progress]);
+
   /**
    * start - Initiates a new scan job
    *
@@ -49,99 +54,151 @@ export default function RunScan() {
    * Updates state to show queued status and stores job ID for polling.
    */
   async function start() {
-    // Update UI to show scan is starting
-    setState('queued');
-    setProgress(0);
+    try {
+      // Force clear any existing job state and ensure clean start
+      console.log('Starting new scan, force clearing all state');
+      setJobId(null);
+      setState('idle');
+      setProgress(0);
 
-    // Get brand configuration and project info from localStorage
-    const brandConfig = localStorage.getItem('brandConfig');
-    const generatedQueries = localStorage.getItem('generatedQueries');
-    const currentProject = localStorage.getItem('currentProject');
+      // Small delay to ensure state is cleared
+      await new Promise((resolve) => setTimeout(resolve, 50));
 
-    const requestBody: Record<string, unknown> = {
-      limit: 20,
-      surfaces: 'google_ai,perplexity',
-    };
+      setState('queued');
+      setProgress(0);
 
-    // Add project ID if available
-    if (currentProject) {
+      // Get current project info from localStorage
+      const currentProject = localStorage.getItem('currentProject');
+      if (!currentProject) {
+        throw new Error('No project selected');
+      }
+
       const project = JSON.parse(currentProject);
-      requestBody.projectId = project.id;
-    }
+      console.log('Starting scan for project:', project.name, 'ID:', project.id);
+      console.log('Full project data:', JSON.stringify(project, null, 2));
 
-    // Add brand configuration if available
-    if (brandConfig) {
-      requestBody.brand = JSON.parse(brandConfig);
-    }
-    if (generatedQueries) {
-      requestBody.queries = JSON.parse(generatedQueries);
-    }
+      const requestBody: Record<string, unknown> = {
+        limit: 20,
+        surfaces: 'google_ai,perplexity',
+        projectId: project.id,
+      };
 
-    // Trigger scan with brand configuration
-    const res = await fetch('/api/scan', {
-      method: 'POST',
-      body: JSON.stringify(requestBody),
-      headers: { 'Content-Type': 'application/json' },
-    });
+      // Create brand configuration from project data
+      let brandConfig = project.brand;
 
-    // Store job ID for status polling
-    const { jobId } = await res.json();
-    setJobId(jobId);
+      // For existing projects that don't have brand object, create it from project fields
+      if (!brandConfig && project.name) {
+        brandConfig = {
+          name: project.name,
+          altSpellings: project.altSpellings || [],
+          products: project.products || [],
+          competitors: project.competitors || [],
+        };
+        console.log('Created brand config from project data:', brandConfig);
+      }
+
+      if (brandConfig) {
+        requestBody.brand = brandConfig;
+        console.log('Using brand config for scan:', brandConfig);
+      }
+
+      console.log('Full request body for scan:', JSON.stringify(requestBody, null, 2));
+
+      // Trigger scan with brand configuration
+      const res = await fetch('/api/scan', {
+        method: 'POST',
+        body: JSON.stringify(requestBody),
+        headers: { 'Content-Type': 'application/json' },
+      });
+
+      if (!res.ok) {
+        throw new Error(`Scan request failed: ${res.status}`);
+      }
+
+      const data = await res.json();
+      if (!data.jobId) {
+        throw new Error('No job ID received from scan endpoint');
+      }
+
+      // Store job ID for status polling
+      console.log('SETTING JOB ID:', data.jobId, 'for project:', project.name);
+      setJobId(data.jobId);
+      console.log('JOB ID SET - should trigger polling effect');
+    } catch (error) {
+      console.error('Failed to start scan:', error);
+      setState('error');
+      setProgress(0);
+      setJobId(null);
+    }
   }
 
-  /**
-   * Polling effect - Monitors job progress
-   *
-   * Sets up an interval to poll GET /api/scan/[id] every 1.5 seconds.
-   * Updates progress bar and state based on job status.
-   * Refreshes page when scan completes to show new data.
-   */
+  // Polling effect - THIS MUST WORK FOR RE-RUNS
   useEffect(() => {
-    if (!jobId) return; // No job to monitor
+    console.log('POLLING EFFECT TRIGGERED - jobId:', jobId);
 
-    // Set up polling interval
-    const t = setInterval(async () => {
-      // Fetch current job status
-      const r = await fetch('/api/scan/' + jobId).then((r) => r.json());
+    if (!jobId || jobId === null || jobId === undefined) {
+      console.log('No valid jobId, exiting polling effect');
+      return;
+    }
 
-      // Update UI with latest progress
-      setProgress(Math.round((r.progress || 0) * 100)); // Convert 0-1 to 0-100
-      setState(r.state);
+    console.log('STARTING FRESH POLLING INTERVAL for job:', jobId);
 
-      // Check if job is complete
-      if (r.state === 'done' || r.state === 'error') {
-        clearInterval(t); // Stop polling
+    // Use a ref to track if we should continue polling
+    let shouldPoll = true;
 
-        // Update project's last scan timestamp
-        if (r.state === 'done') {
-          const currentProject = localStorage.getItem('currentProject');
-          if (currentProject) {
-            const project = JSON.parse(currentProject);
-            project.lastScanned = new Date().toISOString();
-            localStorage.setItem('currentProject', JSON.stringify(project));
+    const pollOnce = async () => {
+      if (!shouldPoll) return;
 
-            // Also update in projects list
-            const projects = JSON.parse(localStorage.getItem('projects') || '[]');
-            const projectIndex = projects.findIndex((p: { id: string }) => p.id === project.id);
-            if (projectIndex !== -1) {
-              projects[projectIndex].lastScanned = project.lastScanned;
-              localStorage.setItem('projects', JSON.stringify(projects));
-            }
-          }
+      const url = '/api/scan/' + jobId;
+      console.log('POLLING:', url);
 
-          // Add a small delay to ensure file is written
-          setTimeout(() => {
-            location.reload(); // Refresh page to show new data in heat-map
-          }, 500);
-        } else {
-          // Error case - still reload to reset UI
-          location.reload();
+      try {
+        const res = await fetch(url);
+        console.log('POLL RESPONSE STATUS:', res.status);
+
+        if (!res.ok) {
+          throw new Error(`Status ${res.status}`);
         }
-      }
-    }, 1500); // Poll every 1.5 seconds
 
-    // Cleanup interval on unmount or job change
-    return () => clearInterval(t);
+        const job = await res.json();
+        console.log('JOB STATE:', job.state, 'PROGRESS:', job.progress);
+
+        if (shouldPoll) {
+          setProgress(Math.round((job.progress || 0) * 100));
+          setState(job.state);
+
+          if (job.state === 'done') {
+            console.log('JOB DONE - RELOADING IN 500ms');
+            shouldPoll = false;
+            setTimeout(() => {
+              window.location.reload();
+            }, 500);
+          } else if (job.state === 'error') {
+            console.log('JOB ERROR');
+            shouldPoll = false;
+            setJobId(null);
+            setState('idle');
+          }
+        }
+      } catch (err) {
+        console.error('POLL ERROR:', err);
+        shouldPoll = false;
+        setJobId(null);
+        setState('idle');
+      }
+    };
+
+    // Start polling immediately
+    pollOnce();
+
+    // Set up interval
+    const intervalId = setInterval(pollOnce, 750);
+
+    return () => {
+      console.log('CLEANUP - STOPPING POLLING');
+      shouldPoll = false;
+      clearInterval(intervalId);
+    };
   }, [jobId]);
 
   return (

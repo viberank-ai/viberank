@@ -124,9 +124,15 @@ export async function POST(req: Request) {
         await fs.mkdir(dataDir, { recursive: true });
 
         // Use project ID if provided, otherwise use brand name as fallback
-        const projectId =
+        let projectId =
           body.projectId ||
           (body.brand?.name ? body.brand.name.toLowerCase().replace(/\s+/g, '-') : 'default');
+
+        // Sanitize project ID to prevent file system issues
+        projectId = projectId.replace(/[^a-zA-Z0-9-_]/g, '').substring(0, 50);
+        if (!projectId) projectId = 'default';
+
+        console.log('Using sanitized project ID for file storage:', projectId);
         const scanResultsFile = path.join(dataDir, `scan-results-${projectId}.json`);
 
         await fs.writeFile(

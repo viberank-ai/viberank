@@ -1,0 +1,73 @@
+{
+  "projectId": "1755678158002",
+  "brand": {
+    "name": "Azeron",
+    "altSpellings": [],
+    "products": [],
+    "competitors": []
+  },
+  "queries": [],
+  "surfaces": [
+    "google_ai",
+    "perplexity"
+  ],
+  "rows": [
+    {
+      "query": "what is Azeron",
+      "surface": "google_ai",
+      "score": 90,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "what is Azeron",
+      "surface": "perplexity",
+      "score": 72,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "Azeron review",
+      "surface": "google_ai",
+      "score": 67,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "Azeron review",
+      "surface": "perplexity",
+      "score": 86,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "Azeron vs competitors",
+      "surface": "google_ai",
+      "score": 63,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "Azeron vs competitors",
+      "surface": "perplexity",
+      "score": 68,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "is Azeron good",
+      "surface": "google_ai",
+      "score": 73,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "is Azeron good",
+      "surface": "perplexity",
+      "score": 75,
+      "present": true,
+      "authority": true
+    }
+  ],
+  "timestamp": "2025-08-20T16:27:13.007Z"
+}

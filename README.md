@@ -30,9 +30,9 @@ VibeRank is a comprehensive system for monitoring and analyzing brand visibility
 │   Scrapers    │  │   Analysis    │  │     Types     │
 │               │  │               │  │               │
 │ • Google AI   │  │ • Presence    │  │ • Brand       │
-│ • Bing        │  │ • Sentiment   │  │ • Snapshot    │
+│ • ChatGPT     │  │ • Sentiment   │  │ • Snapshot    │
 │ • Perplexity  │  │ • Score       │  │ • Surface     │
-│ • ChatGPT     │  │ • Competitors │  │               │
+│               │  │ • Competitors │  │               │
 └───────────────┘  └───────────────┘  └───────────────┘
 ```
 
@@ -172,7 +172,7 @@ Initiates an asynchronous scan job.
 ```json
 {
   "limit": 20,
-  "surfaces": "google_ai,bing_copilot,perplexity",
+  "surfaces": "google_ai,perplexity",
   "concurrency": 2
 }
 ```

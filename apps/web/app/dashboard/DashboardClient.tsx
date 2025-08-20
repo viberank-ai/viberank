@@ -42,13 +42,21 @@ export default function DashboardClient() {
         const project = JSON.parse(currentProject);
         projectId = project.id;
         setProjectName(project.name);
+      } else {
+        // No project selected - show error
+        setData({
+          rows: [],
+          source: 'error',
+          timestamp: new Date().toISOString(),
+          error: 'No project selected',
+        });
+        setLoading(false);
+        return;
       }
 
       try {
-        // Fetch project-specific results
-        const url = projectId
-          ? `/api/latest-results?projectId=${projectId}`
-          : '/api/latest-results';
+        // Fetch project-specific results - always use projectId
+        const url = `/api/latest-results?projectId=${projectId}`;
 
         const res = await fetch(url);
         if (res.ok) {
@@ -118,7 +126,7 @@ export default function DashboardClient() {
             <p className="text-sm text-yellow-400 mt-1">
               Showing demo data - configure your brand and run a scan to see real results
             </p>
-          ) : projectName ? (
+          ) : data.source === 'error' && projectName ? (
             <p className="text-sm text-slate-400 mt-1">
               No scan results yet for {projectName} - click "Run Live GEO Check" to start
             </p>

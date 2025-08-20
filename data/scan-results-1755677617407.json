@@ -1,0 +1,73 @@
+{
+  "projectId": "1755677617407",
+  "brand": {
+    "name": "Garmin",
+    "altSpellings": [],
+    "products": [],
+    "competitors": []
+  },
+  "queries": [],
+  "surfaces": [
+    "google_ai",
+    "perplexity"
+  ],
+  "rows": [
+    {
+      "query": "what is Garmin",
+      "surface": "google_ai",
+      "score": 71,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "what is Garmin",
+      "surface": "perplexity",
+      "score": 80,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "Garmin review",
+      "surface": "google_ai",
+      "score": 58,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "Garmin review",
+      "surface": "perplexity",
+      "score": 63,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "Garmin vs competitors",
+      "surface": "google_ai",
+      "score": 60,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "Garmin vs competitors",
+      "surface": "perplexity",
+      "score": 74,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "is Garmin good",
+      "surface": "google_ai",
+      "score": 74,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "is Garmin good",
+      "surface": "perplexity",
+      "score": 77,
+      "present": true,
+      "authority": true
+    }
+  ],
+  "timestamp": "2025-08-20T16:30:35.992Z"
+}

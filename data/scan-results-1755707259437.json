@@ -1,0 +1,73 @@
+{
+  "projectId": "1755707259437",
+  "brand": {
+    "name": "Family Guy",
+    "altSpellings": [],
+    "products": [],
+    "competitors": []
+  },
+  "queries": [],
+  "surfaces": [
+    "google_ai",
+    "perplexity"
+  ],
+  "rows": [
+    {
+      "query": "what is Family Guy",
+      "surface": "google_ai",
+      "score": 62,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "what is Family Guy",
+      "surface": "perplexity",
+      "score": 76,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "Family Guy review",
+      "surface": "google_ai",
+      "score": 81,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "Family Guy review",
+      "surface": "perplexity",
+      "score": 74,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "Family Guy vs competitors",
+      "surface": "google_ai",
+      "score": 85,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "Family Guy vs competitors",
+      "surface": "perplexity",
+      "score": 76,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "is Family Guy good",
+      "surface": "google_ai",
+      "score": 79,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "is Family Guy good",
+      "surface": "perplexity",
+      "score": 90,
+      "present": true,
+      "authority": true
+    }
+  ],
+  "timestamp": "2025-08-20T16:27:54.220Z"
+}

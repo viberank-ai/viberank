@@ -36,7 +36,7 @@ type Row = {
   /** Search query that was analyzed */
   query: string;
   /** AI platform that provided the response */
-  surface: 'google_ai' | 'bing_copilot' | 'chatgpt' | 'perplexity' | 'other';
+  surface: 'google_ai' | 'chatgpt' | 'perplexity' | 'other';
   /** Visibility score 0-100 for heat-map coloring */
   score: number;
   /** Whether brand was mentioned */
