@@ -175,6 +175,8 @@ importers:
         specifier: ^3.2.4
         version: 3.2.4(@types/debug@4.1.12)(@types/node@24.1.0)(jiti@1.21.7)(tsx@4.20.3)(yaml@2.8.0)
 
+  packages/pipeline: {}
+
   packages/queries:
     dependencies:
       '@viberank/types':
@@ -187,6 +189,22 @@ importers:
       '@types/node':
         specifier: ^24.1.0
         version: 24.1.0
+      vitest:
+        specifier: ^3.2.4
+        version: 3.2.4(@types/debug@4.1.12)(@types/node@24.1.0)(jiti@1.21.7)(tsx@4.20.3)(yaml@2.8.0)
+
+  packages/reco:
+    dependencies:
+      '@viberank/analysis':
+        specifier: workspace:*
+        version: link:../analysis
+      '@viberank/types':
+        specifier: workspace:*
+        version: link:../types
+      html-to-text:
+        specifier: ^9.0.5
+        version: 9.0.5
+    devDependencies:
       vitest:
         specifier: ^3.2.4
         version: 3.2.4(@types/debug@4.1.12)(@types/node@24.1.0)(jiti@1.21.7)(tsx@4.20.3)(yaml@2.8.0)

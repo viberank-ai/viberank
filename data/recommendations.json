@@ -1,0 +1,91 @@
+[
+  {
+    "id": "schema-10",
+    "type": "Schema",
+    "title": "Add Organization/Product JSON‑LD to key pages",
+    "description": "Expose authoritative identity to LLMs and search surfaces.",
+    "steps": [
+      "Add Organization JSON‑LD to homepage and About page",
+      "Add Product JSON‑LD to product pages with offers, review snippets",
+      "Ensure canonical URLs and sameAs profiles"
+    ],
+    "related": [
+      "NO_AUTHORITY_CITATION-4873bcb2"
+    ],
+    "effort": 2,
+    "impact": 4,
+    "confidence": 3,
+    "ice": 60
+  },
+  {
+    "id": "outreach-12",
+    "type": "Outreach",
+    "title": "Secure citations on high‑trust directories",
+    "description": "Seed authority by updating/adding profiles.",
+    "steps": [
+      "Update Crunchbase/LinkedIn profiles",
+      "Submit to relevant industry directories"
+    ],
+    "related": [
+      "NO_AUTHORITY_CITATION-4873bcb2"
+    ],
+    "effort": 2,
+    "impact": 3,
+    "confidence": 3,
+    "ice": 45
+  },
+  {
+    "id": "content-11",
+    "type": "Content",
+    "title": "Publish authoritative \"What is <Brand>?\" resource",
+    "description": "High‑signal explainer that answers common intent.",
+    "steps": [
+      "Create pillar page answering top 5 FAQs (from query set)",
+      "Include citations to docs, case studies, awards",
+      "Link prominently from nav/footer"
+    ],
+    "related": [
+      "NO_AUTHORITY_CITATION-4873bcb2"
+    ],
+    "effort": 3,
+    "impact": 4,
+    "confidence": 3,
+    "ice": 40
+  },
+  {
+    "id": "content-gap-13",
+    "type": "Content",
+    "title": "Create intent‑matched pages for missing queries",
+    "description": "Cover comparison/how‑to/definition intents not represented.",
+    "steps": [
+      "Cluster queries by intent",
+      "Draft pages for each cluster",
+      "Interlink from related pages"
+    ],
+    "related": [
+      "NO_BRAND_MENTION-5a1117e4"
+    ],
+    "effort": 4,
+    "impact": 4,
+    "confidence": 3,
+    "ice": 30
+  },
+  {
+    "id": "use-cases-14",
+    "type": "Content",
+    "title": "Ship product/use‑case pages",
+    "description": "Bridge product‑specific intents with dedicated pages.",
+    "steps": [
+      "One page per product/use‑case",
+      "Comparison tables vs competitors",
+      "Schema for Product"
+    ],
+    "related": [
+      "PRODUCT_GAP-a2692dcb"
+    ],
+    "effort": 4,
+    "impact": 4,
+    "confidence": 3,
+    "ice": 30
+  }
+]
