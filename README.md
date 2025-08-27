@@ -2,7 +2,11 @@
 
 ## Overview
 
-VibeRank is a comprehensive system for monitoring and analyzing brand visibility across AI-powered search engines. It tracks how brands appear in AI-generated responses, analyzes sentiment, and provides actionable insights through a visual dashboard.
+The era of traditional search rankings is over. Large language models don't return lists—they write a running story about every brand. VibeRank captures that narrative across ChatGPT, Google AI Overviews, Bing Copilot, and Perplexity, turning brand mentions into precise, actionable metrics that marketers can track in real time.
+
+VibeRank is a comprehensive monitoring and analysis system that reveals how AI-powered search engines perceive and present your brand. Unlike traditional SEO tools that focus on page rankings, VibeRank analyzes the actual content of AI-generated responses to understand brand visibility, sentiment, competitive positioning, and authority citations. The platform automatically scrapes AI search results, applies advanced sentiment analysis (combining rule-based VADER with GPT-4), detects competitor mentions, and calculates proprietary visibility scores.
+
+Through an intuitive dashboard with heat-map visualizations, marketing teams can monitor their brand's narrative evolution, identify sentiment trends, track competitive share-of-voice, and discover optimization opportunities. Whether you're safeguarding brand reputation, measuring campaign impact, or staying ahead of AI-driven search shifts, VibeRank provides the intelligence needed to own the story that LLMs tell about your brand.
 
 ## System Architecture
 
