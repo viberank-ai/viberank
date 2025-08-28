@@ -1,7 +1,7 @@
 {
-  "projectId": "1755677196985",
+  "projectId": "1755789728391",
   "brand": {
-    "name": "Bing",
+    "name": "intel",
     "altSpellings": [],
     "products": [],
     "competitors": []
@@ -13,61 +13,61 @@
   ],
   "rows": [
     {
-      "query": "what is Bing",
+      "query": "what is intel",
       "surface": "google_ai",
-      "score": 66,
+      "score": 58,
       "present": true,
       "authority": true
     },
     {
-      "query": "what is Bing",
+      "query": "what is intel",
       "surface": "perplexity",
-      "score": 83,
-      "present": true,
-      "authority": true
-    },
-    {
-      "query": "Bing review",
-      "surface": "google_ai",
-      "score": 55,
-      "present": true,
-      "authority": true
-    },
-    {
-      "query": "Bing review",
-      "surface": "perplexity",
-      "score": 85,
-      "present": true,
-      "authority": true
-    },
-    {
-      "query": "Bing vs competitors",
-      "surface": "google_ai",
       "score": 62,
       "present": true,
       "authority": true
     },
     {
-      "query": "Bing vs competitors",
+      "query": "intel review",
+      "surface": "google_ai",
+      "score": 68,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "intel review",
+      "surface": "perplexity",
+      "score": 60,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "intel vs competitors",
+      "surface": "google_ai",
+      "score": 77,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "intel vs competitors",
+      "surface": "perplexity",
+      "score": 58,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "is intel good",
+      "surface": "google_ai",
+      "score": 77,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "is intel good",
       "surface": "perplexity",
       "score": 69,
       "present": true,
       "authority": true
-    },
-    {
-      "query": "is Bing good",
-      "surface": "google_ai",
-      "score": 93,
-      "present": true,
-      "authority": true
-    },
-    {
-      "query": "is Bing good",
-      "surface": "perplexity",
-      "score": 68,
-      "present": true,
-      "authority": true
     }
   ],
-  "timestamp": "2025-08-21T15:18:59.264Z"
+  "timestamp": "2025-08-21T18:31:14.001Z"
 }

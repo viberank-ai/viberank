@@ -1,0 +1,172 @@
+{
+  "projectId": "1755801884049",
+  "brand": {
+    "name": "Jerma985",
+    "description": "Jerma985, or Jerma ( JUR-mə), is an American live streamer, YouTuber, performance artist, and voice actor known for his elaborate Twitch live streams incorporating surreal comedy. He has been described as an online personality across multiple social media platforms.",
+    "products": [
+      "entertainment"
+    ]
+  },
+  "queries": [],
+  "surfaces": [
+    "google_ai",
+    "perplexity"
+  ],
+  "rows": [
+    {
+      "query": "what is Jerma985",
+      "surface": "google_ai",
+      "score": 95,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "what is Jerma985",
+      "surface": "perplexity",
+      "score": 76,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "Jerma985 review",
+      "surface": "google_ai",
+      "score": 97,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "Jerma985 review",
+      "surface": "perplexity",
+      "score": 76,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "Jerma985 vs competitors",
+      "surface": "google_ai",
+      "score": 83,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "Jerma985 vs competitors",
+      "surface": "perplexity",
+      "score": 96,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "is Jerma985 good",
+      "surface": "google_ai",
+      "score": 54,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "is Jerma985 good",
+      "surface": "perplexity",
+      "score": 64,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "best entertainment 2024",
+      "surface": "google_ai",
+      "score": 68,
+      "present": true,
+      "authority": false
+    },
+    {
+      "query": "best entertainment 2024",
+      "surface": "perplexity",
+      "score": 70,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "entertainment recommendations",
+      "surface": "google_ai",
+      "score": 77,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "entertainment recommendations",
+      "surface": "perplexity",
+      "score": 32,
+      "present": true,
+      "authority": false
+    },
+    {
+      "query": "top entertainment companies",
+      "surface": "google_ai",
+      "score": 31,
+      "present": true,
+      "authority": false
+    },
+    {
+      "query": "top entertainment companies",
+      "surface": "perplexity",
+      "score": 68,
+      "present": true,
+      "authority": false
+    },
+    {
+      "query": "entertainment software comparison",
+      "surface": "google_ai",
+      "score": 66,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "entertainment software comparison",
+      "surface": "perplexity",
+      "score": 69,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "leading entertainment providers",
+      "surface": "google_ai",
+      "score": 61,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "leading entertainment providers",
+      "surface": "perplexity",
+      "score": 45,
+      "present": true,
+      "authority": false
+    },
+    {
+      "query": "entertainment market leaders",
+      "surface": "google_ai",
+      "score": 30,
+      "present": true,
+      "authority": false
+    },
+    {
+      "query": "entertainment market leaders",
+      "surface": "perplexity",
+      "score": 63,
+      "present": true,
+      "authority": false
+    },
+    {
+      "query": "enterprise entertainment solutions",
+      "surface": "google_ai",
+      "score": 47,
+      "present": true,
+      "authority": false
+    },
+    {
+      "query": "enterprise entertainment solutions",
+      "surface": "perplexity",
+      "score": 42,
+      "present": true,
+      "authority": false
+    }
+  ],
+  "timestamp": "2025-08-21T18:44:48.355Z"
+}
