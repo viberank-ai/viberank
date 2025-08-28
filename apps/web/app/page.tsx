@@ -11,6 +11,12 @@ interface Project {
   competitors: string[];
   createdAt: string;
   lastScanned?: string;
+  verified?: boolean;
+  brand?: {
+    website?: string;
+    industry?: string;
+    description?: string;
+  };
 }
 
 export default function Home() {
@@ -26,8 +32,8 @@ export default function Home() {
   }, []);
 
   const handleNewProject = () => {
-    // Navigate to setup page for new project
-    router.push('/setup');
+    // Navigate to new setup page with brand verification
+    router.push('/setup-v2');
   };
 
   const handleSelectProject = (projectId: string) => {
@@ -143,7 +149,26 @@ export default function Home() {
                   </svg>
                 </button>
 
-                <h3 className="text-xl font-semibold mb-2">{project.name}</h3>
+                <div className="flex items-start justify-between mb-2">
+                  <h3 className="text-xl font-semibold">{project.name}</h3>
+                  {project.verified && (
+                    <span className="px-2 py-1 bg-green-900/30 border border-green-700 rounded text-xs text-green-400">
+                      ✓ Verified
+                    </span>
+                  )}
+                </div>
+
+                {project.brand?.website && (
+                  <div className="text-sm text-blue-400 mb-2">
+                    {project.brand.website}
+                  </div>
+                )}
+
+                {project.brand?.industry && (
+                  <div className="text-xs text-slate-500 mb-2">
+                    {project.brand.industry}
+                  </div>
+                )}
 
                 <div className="space-y-2 text-sm text-slate-400">
                   {project.products.length > 0 && (

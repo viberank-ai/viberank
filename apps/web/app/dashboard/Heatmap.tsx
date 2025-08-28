@@ -85,6 +85,31 @@ export default function Heatmap({ rows }: { rows: Row[] }) {
 
   const [sel, setSel] = useState<{ q: string; s: string } | null>(null);
 
+  const generateActionsForCell = async (query: string, surface: string, score: number, present: boolean) => {
+    try {
+      // Get project ID from localStorage
+      const currentProject = localStorage.getItem('currentProject');
+      if (!currentProject) {
+        alert('No project selected');
+        return;
+      }
+      const projectId = JSON.parse(currentProject).id;
+      
+      const response = await fetch('/api/actions/generate', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ query, surface, score, present, projectId }),
+      });
+      
+      if (response.ok) {
+        // Navigate to actions page after generating
+        window.location.href = '/actions?highlight=' + encodeURIComponent(`${query}:${surface}`);
+      }
+    } catch (error) {
+      console.error('Failed to generate actions:', error);
+    }
+  };
+
   // Handle empty data case
   if (!rows || rows.length === 0) {
     return (
@@ -138,8 +163,22 @@ export default function Heatmap({ rows }: { rows: Row[] }) {
             (v == null ? 'bg-slate-900' : colorForScore(v, present));
 
           return (
-            <div className={cls} onClick={() => v != null && setSel({ q, s })}>
-              {v == null ? '-' : v} {/* Show dash for missing data */}
+            <div className="relative group">
+              <div className={cls} onClick={() => v != null && setSel({ q, s })}>
+                {v == null ? '-' : v} {/* Show dash for missing data */}
+              </div>
+              {v != null && v < 50 && (
+                <button
+                  className="absolute -top-1 -right-1 w-5 h-5 bg-blue-600 hover:bg-blue-500 text-white text-xs rounded-full opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    generateActionsForCell(q, s, v, present);
+                  }}
+                  title="Generate actions for this problem"
+                >
+                  +
+                </button>
+              )}
             </div>
           );
         },
