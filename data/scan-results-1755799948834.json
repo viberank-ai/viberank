@@ -1,0 +1,316 @@
+{
+  "projectId": "1755799948834",
+  "brand": {
+    "name": "Tesla",
+    "website": "tesla.com",
+    "description": "Electric vehicles, energy storage and solar panel manufacturing",
+    "industry": "Automotive & Energy",
+    "headquarters": "Austin, Texas",
+    "founded": "2003",
+    "size": "100,000+ employees",
+    "products": [
+      "Model S",
+      "Model 3",
+      "Model X",
+      "Model Y",
+      "Cybertruck",
+      "Solar Panels",
+      "Powerwall"
+    ],
+    "competitors": [
+      "Rivian",
+      "Lucid Motors",
+      "BYD",
+      "Ford",
+      "GM"
+    ]
+  },
+  "queries": [],
+  "surfaces": [
+    "google_ai",
+    "perplexity"
+  ],
+  "rows": [
+    {
+      "query": "what is Tesla",
+      "surface": "google_ai",
+      "score": 83,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "what is Tesla",
+      "surface": "perplexity",
+      "score": 73,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "Tesla review",
+      "surface": "google_ai",
+      "score": 75,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "Tesla review",
+      "surface": "perplexity",
+      "score": 87,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "Tesla vs competitors",
+      "surface": "google_ai",
+      "score": 68,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "Tesla vs competitors",
+      "surface": "perplexity",
+      "score": 75,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "is Tesla good",
+      "surface": "google_ai",
+      "score": 74,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "is Tesla good",
+      "surface": "perplexity",
+      "score": 73,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "best Model S 2024",
+      "surface": "google_ai",
+      "score": 76,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "best Model S 2024",
+      "surface": "perplexity",
+      "score": 45,
+      "present": true,
+      "authority": false
+    },
+    {
+      "query": "Model S recommendations",
+      "surface": "google_ai",
+      "score": 37,
+      "present": true,
+      "authority": false
+    },
+    {
+      "query": "Model S recommendations",
+      "surface": "perplexity",
+      "score": 66,
+      "present": true,
+      "authority": false
+    },
+    {
+      "query": "top Model S companies",
+      "surface": "google_ai",
+      "score": 58,
+      "present": true,
+      "authority": false
+    },
+    {
+      "query": "top Model S companies",
+      "surface": "perplexity",
+      "score": 67,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "Model S software comparison",
+      "surface": "google_ai",
+      "score": 47,
+      "present": true,
+      "authority": false
+    },
+    {
+      "query": "Model S software comparison",
+      "surface": "perplexity",
+      "score": 66,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "best Model 3 2024",
+      "surface": "google_ai",
+      "score": 83,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "best Model 3 2024",
+      "surface": "perplexity",
+      "score": 92,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "Model 3 recommendations",
+      "surface": "google_ai",
+      "score": 41,
+      "present": true,
+      "authority": false
+    },
+    {
+      "query": "Model 3 recommendations",
+      "surface": "perplexity",
+      "score": 97,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "top Model 3 companies",
+      "surface": "google_ai",
+      "score": 31,
+      "present": true,
+      "authority": false
+    },
+    {
+      "query": "top Model 3 companies",
+      "surface": "perplexity",
+      "score": 84,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "Model 3 software comparison",
+      "surface": "google_ai",
+      "score": 51,
+      "present": true,
+      "authority": false
+    },
+    {
+      "query": "Model 3 software comparison",
+      "surface": "perplexity",
+      "score": 61,
+      "present": true,
+      "authority": false
+    },
+    {
+      "query": "best Model X 2024",
+      "surface": "google_ai",
+      "score": 43,
+      "present": true,
+      "authority": false
+    },
+    {
+      "query": "best Model X 2024",
+      "surface": "perplexity",
+      "score": 88,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "Model X recommendations",
+      "surface": "google_ai",
+      "score": 35,
+      "present": true,
+      "authority": false
+    },
+    {
+      "query": "Model X recommendations",
+      "surface": "perplexity",
+      "score": 61,
+      "present": true,
+      "authority": false
+    },
+    {
+      "query": "top Model X companies",
+      "surface": "google_ai",
+      "score": 68,
+      "present": true,
+      "authority": false
+    },
+    {
+      "query": "top Model X companies",
+      "surface": "perplexity",
+      "score": 67,
+      "present": true,
+      "authority": false
+    },
+    {
+      "query": "Model X software comparison",
+      "surface": "google_ai",
+      "score": 33,
+      "present": true,
+      "authority": false
+    },
+    {
+      "query": "Model X software comparison",
+      "surface": "perplexity",
+      "score": 53,
+      "present": true,
+      "authority": false
+    },
+    {
+      "query": "Tesla vs Rivian",
+      "surface": "google_ai",
+      "score": 88,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "Tesla vs Rivian",
+      "surface": "perplexity",
+      "score": 93,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "Rivian alternative",
+      "surface": "google_ai",
+      "score": 45,
+      "present": true,
+      "authority": false
+    },
+    {
+      "query": "Rivian alternative",
+      "surface": "perplexity",
+      "score": 47,
+      "present": true,
+      "authority": false
+    },
+    {
+      "query": "Rivian vs Tesla Model S",
+      "surface": "google_ai",
+      "score": 89,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "Rivian vs Tesla Model S",
+      "surface": "perplexity",
+      "score": 70,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "Tesla vs Lucid Motors",
+      "surface": "google_ai",
+      "score": 61,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "Tesla vs Lucid Motors",
+      "surface": "perplexity",
+      "score": 71,
+      "present": true,
+      "authority": true
+    }
+  ],
+  "timestamp": "2025-08-21T18:12:38.547Z"
+}

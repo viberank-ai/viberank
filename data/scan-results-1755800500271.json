@@ -1,0 +1,313 @@
+{
+  "projectId": "1755800500271",
+  "brand": {
+    "name": "Airbnb",
+    "website": "airbnb.com",
+    "description": "Online marketplace for lodging, primarily homestays for vacation rentals",
+    "industry": "Travel & Hospitality",
+    "headquarters": "San Francisco, California",
+    "founded": "2008",
+    "size": "5,000-10,000 employees",
+    "products": [
+      "Short-term rentals",
+      "Experiences",
+      "Long-term stays",
+      "Airbnb Plus",
+      "Luxe"
+    ],
+    "competitors": [
+      "Vrbo",
+      "Booking.com",
+      "Hotels.com",
+      "Expedia"
+    ]
+  },
+  "queries": [],
+  "surfaces": [
+    "google_ai",
+    "perplexity"
+  ],
+  "rows": [
+    {
+      "query": "what is Airbnb",
+      "surface": "google_ai",
+      "score": 84,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "what is Airbnb",
+      "surface": "perplexity",
+      "score": 57,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "Airbnb review",
+      "surface": "google_ai",
+      "score": 65,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "Airbnb review",
+      "surface": "perplexity",
+      "score": 65,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "Airbnb vs competitors",
+      "surface": "google_ai",
+      "score": 58,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "Airbnb vs competitors",
+      "surface": "perplexity",
+      "score": 71,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "is Airbnb good",
+      "surface": "google_ai",
+      "score": 77,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "is Airbnb good",
+      "surface": "perplexity",
+      "score": 58,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "best Short-term rentals 2024",
+      "surface": "google_ai",
+      "score": 62,
+      "present": true,
+      "authority": false
+    },
+    {
+      "query": "best Short-term rentals 2024",
+      "surface": "perplexity",
+      "score": 38,
+      "present": true,
+      "authority": false
+    },
+    {
+      "query": "Short-term rentals recommendations",
+      "surface": "google_ai",
+      "score": 43,
+      "present": true,
+      "authority": false
+    },
+    {
+      "query": "Short-term rentals recommendations",
+      "surface": "perplexity",
+      "score": 49,
+      "present": true,
+      "authority": false
+    },
+    {
+      "query": "top Short-term rentals companies",
+      "surface": "google_ai",
+      "score": 54,
+      "present": true,
+      "authority": false
+    },
+    {
+      "query": "top Short-term rentals companies",
+      "surface": "perplexity",
+      "score": 75,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "Short-term rentals software comparison",
+      "surface": "google_ai",
+      "score": 69,
+      "present": true,
+      "authority": false
+    },
+    {
+      "query": "Short-term rentals software comparison",
+      "surface": "perplexity",
+      "score": 34,
+      "present": true,
+      "authority": false
+    },
+    {
+      "query": "best Experiences 2024",
+      "surface": "google_ai",
+      "score": 47,
+      "present": true,
+      "authority": false
+    },
+    {
+      "query": "best Experiences 2024",
+      "surface": "perplexity",
+      "score": 84,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "Experiences recommendations",
+      "surface": "google_ai",
+      "score": 35,
+      "present": true,
+      "authority": false
+    },
+    {
+      "query": "Experiences recommendations",
+      "surface": "perplexity",
+      "score": 68,
+      "present": true,
+      "authority": false
+    },
+    {
+      "query": "top Experiences companies",
+      "surface": "google_ai",
+      "score": 53,
+      "present": true,
+      "authority": false
+    },
+    {
+      "query": "top Experiences companies",
+      "surface": "perplexity",
+      "score": 79,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "Experiences software comparison",
+      "surface": "google_ai",
+      "score": 38,
+      "present": true,
+      "authority": false
+    },
+    {
+      "query": "Experiences software comparison",
+      "surface": "perplexity",
+      "score": 37,
+      "present": true,
+      "authority": false
+    },
+    {
+      "query": "best Long-term stays 2024",
+      "surface": "google_ai",
+      "score": 39,
+      "present": true,
+      "authority": false
+    },
+    {
+      "query": "best Long-term stays 2024",
+      "surface": "perplexity",
+      "score": 57,
+      "present": true,
+      "authority": false
+    },
+    {
+      "query": "Long-term stays recommendations",
+      "surface": "google_ai",
+      "score": 53,
+      "present": true,
+      "authority": false
+    },
+    {
+      "query": "Long-term stays recommendations",
+      "surface": "perplexity",
+      "score": 70,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "top Long-term stays companies",
+      "surface": "google_ai",
+      "score": 59,
+      "present": true,
+      "authority": false
+    },
+    {
+      "query": "top Long-term stays companies",
+      "surface": "perplexity",
+      "score": 59,
+      "present": true,
+      "authority": false
+    },
+    {
+      "query": "Long-term stays software comparison",
+      "surface": "google_ai",
+      "score": 73,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "Long-term stays software comparison",
+      "surface": "perplexity",
+      "score": 69,
+      "present": true,
+      "authority": false
+    },
+    {
+      "query": "Airbnb vs Vrbo",
+      "surface": "google_ai",
+      "score": 66,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "Airbnb vs Vrbo",
+      "surface": "perplexity",
+      "score": 60,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "Vrbo alternative",
+      "surface": "google_ai",
+      "score": 68,
+      "present": true,
+      "authority": false
+    },
+    {
+      "query": "Vrbo alternative",
+      "surface": "perplexity",
+      "score": 33,
+      "present": true,
+      "authority": false
+    },
+    {
+      "query": "Vrbo vs Airbnb Short-term rentals",
+      "surface": "google_ai",
+      "score": 62,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "Vrbo vs Airbnb Short-term rentals",
+      "surface": "perplexity",
+      "score": 88,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "Airbnb vs Booking.com",
+      "surface": "google_ai",
+      "score": 82,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "Airbnb vs Booking.com",
+      "surface": "perplexity",
+      "score": 71,
+      "present": true,
+      "authority": true
+    }
+  ],
+  "timestamp": "2025-08-21T18:31:00.627Z"
+}

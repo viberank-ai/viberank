@@ -18,27 +18,45 @@ type Rec = {
   ice: number;
   effort: number;
   related: string[];
+  source?: {
+    query: string;
+    surface: string;
+    score: number;
+    present: boolean;
+  };
 };
 type State = Record<string, { status: 'Backlog' | 'Doing' | 'Done'; note?: string }>;
 
 const COLS = ['Backlog', 'Doing', 'Done'] as const;
 
-function Card({ rec, id }: { rec: Rec; id: string }) {
+function Card({ rec, id, highlighted }: { rec: Rec; id: string; highlighted?: boolean }) {
   const { attributes, listeners, setNodeRef, transform, transition } = useSortable({ id });
   const style = { transform: CSS.Transform.toString(transform), transition };
+  const borderClass = highlighted ? 'border-blue-500 shadow-lg shadow-blue-500/20' : 'border-slate-700';
+  
   return (
     <div
       ref={setNodeRef}
       style={style}
       {...attributes}
       {...listeners}
-      className="bg-slate-900 border border-slate-700 rounded p-3 mb-2"
+      className={`bg-slate-900 border ${borderClass} rounded p-3 mb-2 transition-all`}
     >
       <div className="text-sm opacity-70">{rec.type}</div>
       <div className="font-medium">{rec.title}</div>
+      {rec.source && (
+        <div className="text-xs text-blue-400 mt-1 bg-slate-800 rounded px-2 py-1">
+          📊 {rec.source.query} on {rec.source.surface} (score: {rec.source.score})
+        </div>
+      )}
       <div className="text-xs opacity-70 mt-1">
         ICE {rec.ice} • Effort {rec.effort}
       </div>
+      {highlighted && (
+        <div className="text-xs text-blue-400 mt-1 font-medium">
+          🎯 Generated from heatmap
+        </div>
+      )}
     </div>
   );
 }
@@ -54,6 +72,11 @@ export default function Kanban({ recs, state }: { recs: Rec[]; state: State }) {
   const [columns, setColumns] = useState(byCol);
   const sensors = useSensors(useSensor(PointerSensor, { activationConstraint: { distance: 5 } }));
 
+  // Check for highlight parameter
+  const highlightId = typeof window !== 'undefined' 
+    ? new URLSearchParams(window.location.search).get('highlight')
+    : null;
+
   useEffect(() => {
     setColumns(byCol);
   }, [recs.length]);
@@ -61,7 +84,13 @@ export default function Kanban({ recs, state }: { recs: Rec[]; state: State }) {
   async function save(newCols: typeof columns) {
     const out: State = {};
     for (const c of COLS) for (const id of newCols[c]) out[id] = { status: c };
-    await fetch('/api/actions/state', {
+    
+    // Get project ID from localStorage
+    const currentProject = localStorage.getItem('currentProject');
+    if (!currentProject) return;
+    const projectId = JSON.parse(currentProject).id;
+    
+    await fetch(`/api/actions/state?projectId=${projectId}`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(out),
@@ -100,9 +129,14 @@ export default function Kanban({ recs, state }: { recs: Rec[]; state: State }) {
           <div key={col} className="bg-slate-950 border border-slate-800 rounded p-3">
             <div className="font-medium mb-2">{col}</div>
             <SortableContext items={columns[col]} strategy={verticalListSortingStrategy}>
-              {columns[col].map((id) => (
-                <Card key={id} id={id} rec={map.get(id)!} />
-              ))}
+              {columns[col].map((id) => {
+                const rec = map.get(id)!;
+                const isHighlighted = highlightId && rec.source && 
+                  `${rec.source.query}:${rec.source.surface}` === highlightId;
+                return (
+                  <Card key={id} id={id} rec={rec} highlighted={isHighlighted} />
+                );
+              })}
             </SortableContext>
           </div>
         ))}

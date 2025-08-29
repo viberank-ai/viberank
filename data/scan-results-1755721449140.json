@@ -1,7 +1,7 @@
 {
-  "projectId": "1755677196985",
+  "projectId": "1755721449140",
   "brand": {
-    "name": "Bing",
+    "name": "Lovense",
     "altSpellings": [],
     "products": [],
     "competitors": []
@@ -13,61 +13,61 @@
   ],
   "rows": [
     {
-      "query": "what is Bing",
+      "query": "what is Lovense",
       "surface": "google_ai",
-      "score": 66,
+      "score": 51,
       "present": true,
       "authority": true
     },
     {
-      "query": "what is Bing",
+      "query": "what is Lovense",
       "surface": "perplexity",
+      "score": 68,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "Lovense review",
+      "surface": "google_ai",
+      "score": 64,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "Lovense review",
+      "surface": "perplexity",
+      "score": 87,
+      "present": true,
+      "authority": true
+    },
+    {
+      "query": "Lovense vs competitors",
+      "surface": "google_ai",
       "score": 83,
       "present": true,
       "authority": true
     },
     {
-      "query": "Bing review",
-      "surface": "google_ai",
-      "score": 55,
-      "present": true,
-      "authority": true
-    },
-    {
-      "query": "Bing review",
+      "query": "Lovense vs competitors",
       "surface": "perplexity",
-      "score": 85,
+      "score": 80,
       "present": true,
       "authority": true
     },
     {
-      "query": "Bing vs competitors",
+      "query": "is Lovense good",
       "surface": "google_ai",
-      "score": 62,
+      "score": 78,
       "present": true,
       "authority": true
     },
     {
-      "query": "Bing vs competitors",
+      "query": "is Lovense good",
       "surface": "perplexity",
-      "score": 69,
-      "present": true,
-      "authority": true
-    },
-    {
-      "query": "is Bing good",
-      "surface": "google_ai",
-      "score": 93,
-      "present": true,
-      "authority": true
-    },
-    {
-      "query": "is Bing good",
-      "surface": "perplexity",
-      "score": 68,
+      "score": 54,
       "present": true,
       "authority": true
     }
   ],
-  "timestamp": "2025-08-21T15:18:59.264Z"
+  "timestamp": "2025-08-20T20:24:12.002Z"
 }

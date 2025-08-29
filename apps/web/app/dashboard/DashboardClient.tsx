@@ -139,6 +139,9 @@ export default function DashboardClient() {
           <a href="/setup" className="text-blue-400 hover:text-blue-300 text-sm underline">
             Configure Brand
           </a>
+          <a href="/actions" className="bg-purple-600 hover:bg-purple-500 text-white px-3 py-1 rounded text-sm font-medium transition-colors">
+            View Actions
+          </a>
           <ShareButton />
           <RunScan />
         </div>
